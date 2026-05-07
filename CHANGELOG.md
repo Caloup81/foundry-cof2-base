@@ -1,3 +1,6 @@
+# 2.1.1
+- Ajout multiciblage dans le guide, organisation des chapitres, corrections
+
 # 2.1.0
 ## Guide du système
 - Mise à jour complète des sections "Options du Système", "Jet d'attaque", "Jet de dommages", "Jet de sauvegarde" et "Jet en opposition" pour refléter le nouveau système multi-cibles
