@@ -1,10 +1,22 @@
-# 2.1.2
+# 2.1.3
 
-- Correction de la capacité Protéger un allié (guerrier) qui ajouter le 2+rang en caractéristique de perception au lieu d'un bonus au jets de compétence.
-- Correction de Arme de lumière qui n'avait pas les bon bonus de dommage sur les armes alliées
-- Correction de Ailes célestes pour qu'elle consomme bien la mana
-- Correction de Vigueur divine pour qu'elle fasse bien une attaque magique en opposition
-- Correction dans le system pour la capacité Récupération majeure pour laquelle le deuxieme dé d'évolution n'était pas convertie.
+## Corrections
+Merci Morkheer pour les avoir signalées (issue [#83](https://github.com/BlackBookEditions/foundry-cof2-base/issues/83))
+- Capacités du moine
+  - Poings de fer (Voie du poing) : ajout du modificateur de FOR manquant dans les DM de l'action Frappe, réécriture du texte inGame
+  - Puissance du ki (Voie de la maîtrise) : dé bonus → dé malus, cible attaque à distance → attaque magique, ajout DM magiques +2d4°
+  - Agilité héroïque (Voie du vent) : texte inGame corrigé (bonus permanent automatique)
+
+Merci Morkheer pour les avoir signalées (issue [#85](https://github.com/BlackBookEditions/foundry-cof2-base/issues/85))
+- Capacités du prêtre
+  - Correction de la capacité Protéger un allié (guerrier) qui ajoutait le 2+rang en caractéristique de perception au lieu d'un bonus aux jets de compétence
+  - Correction de Arme de lumière qui n'avait pas les bons bonus de dommages sur les armes alliées
+  - Correction de Ailes célestes pour qu'elle consomme bien le mana
+  - Correction de Vigueur divine pour qu'elle fasse bien une attaque magique en opposition
+  - Correction dans le système pour la capacité Récupération majeure pour laquelle le deuxième dé d'évolution n'était pas converti
+
+Merci Jaka pour l'avoir signalée
+- Correction de Protéger un allié : le bonus est aux jets de compétence et non aux jets de caractéristique
 
 # 2.1.1
 

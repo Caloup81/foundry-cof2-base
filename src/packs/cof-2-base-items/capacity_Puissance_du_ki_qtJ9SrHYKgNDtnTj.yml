@@ -53,15 +53,22 @@ system:
           additionalInfos: ''
         - type: capacity
           source: Item.Ua3XNrP03GsXgTwG
-          subtype: bonusDice
+          subtype: combat
+          target: damMagic
+          apply: self
+          value: 2d4°
+          additionalInfos: ''
+        - type: capacity
+          source: Item.Ua3XNrP03GsXgTwG
+          subtype: malusDice
           target: melee
           apply: self
           value: '0'
           additionalInfos: ''
         - type: capacity
           source: Item.Ua3XNrP03GsXgTwG
-          subtype: bonusDice
-          target: ranged
+          subtype: malusDice
+          target: magic
           apply: self
           value: '0'
           additionalInfos: ''

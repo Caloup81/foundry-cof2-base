@@ -10,12 +10,12 @@ system:
     chaque rang suivant : 1d8 au rang 2, 1d10 au rang 3, 1d12 au rang 4 et enfin
     2d6 au rang 5.</p>
   inGame: >-
-    <p>Comme de nombreuses capacités du Moine modifient les valeurs de ses
-    attaques avec l'équipement "Mains Nues", il est préférable de mofifier
-    directement l'équipement quand cette capacité est apprise. Le PJ peut
-    modifier les Dommages dans la résolutions de l'action "Mains Nues" par
-    @rang[1d6,1d8,1d10,1d12,2d6] + @for. La deuxième action permet de substituer
-    AGI à FOR pour le calcul de l'attaque de contact lorsqu'il le souhaite.</p>
+    <p>La première action « Attaque avec AGI » est un buff activable qui permet
+    de substituer l'AGI à la FOR pour le test d'attaque au contact. La seconde
+    action « Frappe » remplace l'attaque de base « Mains Nues » : elle inflige
+    des DM progressifs selon le rang dans la voie (1d6 au rang 1, 1d8 au rang 2,
+    1d10 au rang 3, 1d12 au rang 4, 2d6 au rang 5) + modificateur de FOR. Il
+    n'est pas nécessaire de modifier l'équipement Mains Nues.</p>
   source: ''
   origin: Livre des règles p121
   slug: poings-de-fer
@@ -79,7 +79,7 @@ system:
             crit: ''
             difficulty: '@cible.def'
           dmg:
-            formula: '@rang[1d6,1d8,1d10,1d12,2d6]'
+            formula: '@rang[1d6,1d8,1d10,1d12,2d6] + @for'
           target:
             type: single
             number: 0
