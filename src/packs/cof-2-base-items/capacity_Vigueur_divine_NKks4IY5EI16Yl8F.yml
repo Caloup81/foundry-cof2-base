@@ -37,12 +37,14 @@ system:
       chatFlavor: ''
       img: icons/svg/d20-highlight.svg
       type: spell
+      actionType: none
       properties:
-        visible: false
-        enabled: false
         activable: false
         temporary: false
+        noChargesUsed: false
         noManaCost: false
+        visible: false
+        enabled: false
       conditions:
         - predicate: isLearned
       modifiers:
@@ -59,13 +61,15 @@ system:
       label: contre infection surnaturelle
       chatFlavor: ''
       img: icons/svg/d20-highlight.svg
-      type: spell
+      type: magical
+      actionType: none
       properties:
-        visible: false
-        enabled: false
         activable: true
         temporary: false
+        noChargesUsed: false
         noManaCost: false
+        visible: false
+        enabled: false
       conditions:
         - predicate: isLearned
       resolvers:
@@ -82,12 +86,14 @@ system:
             type: single
             scope: all
             number: 0
+          hasAttackSuccessThreshold: false
           additionalEffect:
             active: false
             applyOn: success
             statuses: []
             duration: '0'
             unit: round
+          halfDmgOnSave: true
       modifiers: []
   cost: -1
   rank: 2
@@ -103,11 +109,11 @@ flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '14.361'
   systemId: co2
-  systemVersion: 13.344.0
+  systemVersion: '#{VERSION}#'
   createdTime: 1740761026318
-  modifiedTime: 1753892878898
+  modifiedTime: 1778442473215
   lastModifiedBy: dkGm1qUrVLQeAKiY
   exportSource: null
 _key: '!items!NKks4IY5EI16Yl8F'
