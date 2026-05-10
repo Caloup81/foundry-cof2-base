@@ -42,15 +42,16 @@ system:
       indice: 0
       label: Son arme contre démons et morts-vivants
       chatFlavor: ''
+      img: icons/svg/d20-highlight.svg
       type: buff
       actionType: m
-      img: icons/svg/d20-highlight.svg
       properties:
-        visible: false
-        enabled: false
         activable: true
         temporary: true
+        noChargesUsed: false
         noManaCost: false
+        visible: false
+        enabled: false
       conditions:
         - predicate: isLearned
       modifiers:
@@ -58,30 +59,31 @@ system:
           source: Item.6qZt0GhxpS9ZKiKd
           subtype: combat
           target: damMelee
-          apply: self
           value: '@rang[1d4°,1d4°,1d4°,1d4°,2d4°]'
+          apply: self
           additionalInfos: ''
         - type: capacity
           source: Item.6qZt0GhxpS9ZKiKd
           subtype: bonusDice
           target: melee
-          apply: self
           value: '0'
+          apply: self
           additionalInfos: ''
       resolvers: []
     - source: Item.6qZt0GhxpS9ZKiKd
-      indice: 0
+      indice: 1
       label: Arme d'un allié
       chatFlavor: ''
+      img: icons/svg/d20-highlight.svg
       type: buff
       actionType: l
-      img: icons/svg/d20-highlight.svg
       properties:
+        activable: true
+        temporary: false
+        noChargesUsed: false
+        noManaCost: false
         visible: false
         enabled: false
-        activable: false
-        temporary: false
-        noManaCost: false
       conditions:
         - predicate: isLearned
       modifiers:
@@ -89,24 +91,22 @@ system:
           source: Item.6qZt0GhxpS9ZKiKd
           subtype: combat
           target: damMelee
+          value: 1d4°
           apply: others
-          value: '@rang[1d4°,1d4°,1d4°,1d4°,2d4°]'
           additionalInfos: ''
         - type: capacity
           source: Item.6qZt0GhxpS9ZKiKd
           subtype: bonusDice
           target: melee
-          apply: others
           value: '0'
+          apply: others
           additionalInfos: ''
       resolvers:
         - type: buffDebuff
-          bonusDiceAdd: false
-          malusDiceAdd: false
           target:
-            type: others
+            type: single
+            scope: allies
             number: 0
-            scope: all
           additionalEffect:
             active: true
             applyOn: always
@@ -116,9 +116,12 @@ system:
             statuses: []
             duration: '@cha*10'
             unit: round
-            successThreshold: null
+          bonusDiceAdd: false
+          malusDiceAdd: false
           skill: {}
           dmg: {}
+          halfDmgOnSave: true
+          hasAttackSuccessThreshold: false
   allowLinkedCapacity: false
   linkedCapacity: null
   parentCapacity: null
@@ -130,11 +133,11 @@ flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.345'
+  coreVersion: '14.361'
   systemId: co2
-  systemVersion: 12.331.0
+  systemVersion: '#{VERSION}#'
   createdTime: 1749761213903
-  modifiedTime: 1749761232889
+  modifiedTime: 1778442244532
   lastModifiedBy: dkGm1qUrVLQeAKiY
   exportSource: null
 _id: PmvZ6975Z8Zz57DJ

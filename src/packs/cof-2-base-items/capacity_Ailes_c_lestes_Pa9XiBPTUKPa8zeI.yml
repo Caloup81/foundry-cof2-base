@@ -29,33 +29,19 @@ system:
       indice: 0
       label: Activer le sort
       chatFlavor: ''
-      type: spell
       img: icons/svg/d20-highlight.svg
+      type: spell
+      actionType: none
       properties:
-        visible: false
-        enabled: false
         activable: true
         temporary: false
+        noChargesUsed: false
         noManaCost: false
+        visible: false
+        enabled: false
       conditions:
         - predicate: isLearned
-      resolvers:
-        - type: buffDebuff
-          bonusDiceAdd: false
-          malusDiceAdd: false
-          target:
-            type: self
-            number: 0
-            scope: all
-          additionalEffect:
-            active: false
-            applyOn: success
-            successThreshold: null
-            statuses: []
-            duration: '0'
-            unit: round
-          skill: {}
-          dmg: {}
+      resolvers: []
       modifiers: []
   cost: -1
   rank: 4
@@ -71,11 +57,11 @@ flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.345'
+  coreVersion: '14.361'
   systemId: co2
-  systemVersion: 12.331.0
+  systemVersion: '#{VERSION}#'
   createdTime: 1740761026318
-  modifiedTime: 1749761375590
+  modifiedTime: 1778442297329
   lastModifiedBy: dkGm1qUrVLQeAKiY
   exportSource: null
 _key: '!items!Pa9XiBPTUKPa8zeI'
