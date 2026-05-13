@@ -525,15 +525,43 @@
   </p>
 
   <h3>Attribut</h3>
-  <p class="alinea">
-    Il n’y a que deux Sous-type pour cette option : <span class="gras">Points de Vigueur</span> et <span class="gras">Déplacement</span>. La valeur pour ces Sous-types peut
-    être<span class="gras"> un nombre entier positif ou négatif ou une variable chiffrée de l’Acteur</span>
-    ou une formule combinant des nombres entiers. La valeur sera ajoutée ou retranchée de votre maximum de Points de Vigueur ou de votre distance de Déplacement.
-  </p>
-  <ul class="exemple">
-    <p class="alinea"><span class="gras">Exemple :</span> 2 + @con + @niv</p>
+  <p class="alinea">Il y a cinq Sous-types pour cette option :</p>
+  <ul>
+    <li>
+      <p class="alinea">
+        <span class="gras">Points de Vigueur</span> et <span class="gras">Déplacement</span>. La valeur pour ces Sous-types peut être<span class="gras">
+          un nombre entier positif ou négatif ou une variable chiffrée de l’Acteur</span
+        >
+        ou une formule combinant des nombres entiers. La valeur sera ajoutée ou retranchée de votre maximum de Points de Vigueur ou de votre distance de Déplacement.
+      </p>
+    </li>
+    <ul class="exemple">
+      <p class="alinea"><span class="gras">Exemple :</span> 2 + @con + @niv</p>
+    </ul>
+    <li>
+      <p class="alinea">
+        L'option <span class="gras">Dé Évolutif permet d'augmenter ou de diminuer le Dé Évolutif de l'Acteur d'un ou de plusieurs crans</span> dans la liste. Dans la case Valeur il
+        faut indiquer <span class="gras">un nombre entier positif ou négatif</span> du nombre de cran de différence. La liste des valeurs du dé évolutif est : d4, d6, d8, d10, d12
+        et 2d6. Une valeur trop élevée ou trop basse sera bloquée sur la première ou la dernière valeur de la liste.
+      </p>
+      <ul class="exemple">
+        <p class="alinea">
+          <span class="gras">Exemple : </span>si une capacité augmente le dé évolutif du personnage de 1d6 à 1d8, inscrivez "1" dans la valeur du Modificateur. Au contraire, si un
+          capacité réduit d'un cran le dé évolutif d'une cible, écrivez "-1" dans la valeur du Modificateur.
+        </p>
+      </ul>
+    </li>
+    <li>
+      <p class="alinea">
+        Les options <span class="gras">Récupération rapide et Récupération complète permettent de rajouter des bonus ou des malus aux jets de soins</span> réaliser lors des
+        récupérations. Il est possible d'inscrire dans le champs Valeur <span class="gras">un nombre entier positif ou négatif, des formule de jets de dés ou des variables.</span>
+      </p>
+      <ul class="exemple">
+        <p class="alinea"><span class="gras">Exemple :</span> "1d10 +@for" ajoutera au jet de la récupération 1d10 + la FOR du personnage.</p>
+      </ul>
+    </li>
   </ul>
-  <h4>Points de Vigueur actuels</h4>
+  <h5>Points de Vigueur actuels</h5>
   <p class="alinea">
     <span class="gras"
       >Lorsque vous activez une capacité qui augmente ou diminue le nombre de vos Points de Vigueur, votre nombre de Points de Vigueur actuel n’est pas modifié</span
@@ -557,7 +585,7 @@
   <ul class="exemple">
     <p class="alinea"><span class="gras">Exemple :</span> 5 + @int</p>
   </ul>
-  <h4>Valeur Actuelle des Ressources</h4>
+  <h5>Valeur Actuelle des Ressources</h5>
   <p class="alinea">
     Comme pour les Points de Vigueur expliqués juste au-dessus,
     <span class="gras">la valeur actuelle des Ressources que vous modifiez ne sera pas influencée par l’augmentation ou la diminution de la valeur maximum</span>. Pour ces trois
