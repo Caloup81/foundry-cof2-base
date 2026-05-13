@@ -55,6 +55,8 @@ system:
         - type: save
           saveAbility: con
           saveDifficulty: 10+@int
+          dmg:
+            formula: 4d4° + @int
           target:
             type: multiple
             number: 10
@@ -63,7 +65,7 @@ system:
             active: true
             applyOn: saveFailure
             formulaType: damage
-            formula: 4d4° + @int
+            formula: ''
             elementType: ice
             statuses:
               - slowed
@@ -72,7 +74,7 @@ system:
           bonusDiceAdd: false
           malusDiceAdd: false
           skill: {}
-          dmg: {}
+          halfDmgOnSave: true
       modifiers: []
   allowLinkedCapacity: false
   linkedCapacity: null

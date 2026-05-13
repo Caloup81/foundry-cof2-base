@@ -10,9 +10,8 @@ system:
     pour celles qui réussissent un test d’AGI difficulté [10 + CHA].</p>
   inGame: >-
     <p>Le joueur sélectionne ses cibles puis clique sur l'action pour lancer le
-    sort qui va automatiquement lancer les dommages et dépenser les PM du
-    personnage. </p><p>La deuxième action permet de réaliser le test de
-    sauvegarde d'AGI en ciblant les acteurs touchés.</p><p><em>Note : Pour
+    sort qui va lancer les dommages et demander un test de sauvegarde d'AGI.
+    En cas de réussite, les DM sont divisés par 2.</p><p><em>Note : Pour
     utiliser la "concentration" faites SHIFT+CLIC sur l'action</em></p>
   source: ''
   origin: Livre des règles p93
@@ -46,7 +45,9 @@ system:
       conditions:
         - predicate: isLearned
       resolvers:
-        - type: auto
+        - type: save
+          saveAbility: agi
+          saveDifficulty: 10+@cha
           dmg:
             formula: 4d4°+@cha
           target:
@@ -62,41 +63,7 @@ system:
           bonusDiceAdd: false
           malusDiceAdd: false
           skill: {}
-      modifiers: []
-    - source: Compendium.cof2-base.cof-2-base-items.Item.yA3F88CwL36zUmFj
-      indice: 1
-      label: 1/2 DM
-      chatFlavor: ''
-      img: icons/svg/d20-highlight.svg
-      type: spell
-      actionType: none
-      properties:
-        activable: true
-        temporary: false
-        noChargesUsed: true
-        noManaCost: true
-        visible: false
-        enabled: false
-      conditions:
-        - predicate: isLearned
-      resolvers:
-        - type: save
-          saveAbility: agi
-          saveDifficulty: 10+@cha
-          target:
-            type: multiple
-            number: 10
-            scope: all
-          additionalEffect:
-            active: false
-            applyOn: success
-            statuses: []
-            duration: '0'
-            unit: round
-          bonusDiceAdd: false
-          malusDiceAdd: false
-          skill: {}
-          dmg: {}
+          halfDmgOnSave: true
       modifiers: []
   cost: -1
   rank: 4

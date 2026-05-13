@@ -12,10 +12,9 @@ system:
     DM.</p>
   inGame: >-
     <p>Le joueur sélectionne ses cibles puis clique sur l'action pour lancer le
-    sort qui va automatiquement lancer les dommages.</p><p>La deuxième action
-    permet de réaliser le test de sauvegarde pour réduire les DM de
-    moitié.</p><p>Pensez à remplacer @int par @cha pour un ensorceleur ou un
-    barde.</p>
+    sort qui va lancer les dommages et demander un test de sauvegarde d'AGI. En
+    cas de réussite, les DM sont divisés par 2.</p><p>Pensez à remplacer @int
+    par @cha pour un ensorceleur ou un barde.</p>
   source: ''
   origin: Livre des règles p161
   slug: vague-de-feu
@@ -50,7 +49,9 @@ system:
       conditions:
         - predicate: isLearned
       resolvers:
-        - type: auto
+        - type: save
+          saveAbility: agi
+          saveDifficulty: '15'
           dmg:
             formula: 5d4° + @int
           target:
@@ -66,41 +67,7 @@ system:
           bonusDiceAdd: false
           malusDiceAdd: false
           skill: {}
-      modifiers: []
-    - source: Compendium.cof2-base.cof-2-base-items.Item.Vls852pJhW9v6ESf
-      indice: 1
-      label: 1/2 DM
-      chatFlavor: ''
-      img: icons/svg/d20-highlight.svg
-      type: spell
-      actionType: none
-      properties:
-        activable: true
-        temporary: false
-        noChargesUsed: true
-        noManaCost: true
-        visible: false
-        enabled: false
-      conditions:
-        - predicate: isLearned
-      resolvers:
-        - type: save
-          saveAbility: agi
-          saveDifficulty: '15'
-          target:
-            type: multiple
-            number: 10
-            scope: all
-          additionalEffect:
-            active: false
-            applyOn: success
-            statuses: []
-            duration: '0'
-            unit: round
-          bonusDiceAdd: false
-          malusDiceAdd: false
-          skill: {}
-          dmg: {}
+          halfDmgOnSave: true
       modifiers: []
   allowLinkedCapacity: false
   linkedCapacity: null

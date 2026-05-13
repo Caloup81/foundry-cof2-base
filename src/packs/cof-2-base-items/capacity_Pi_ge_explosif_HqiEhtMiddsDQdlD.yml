@@ -16,8 +16,8 @@ system:
     @UUID[Compendium.cof2-base.cof-2-base-items.Item.BLf2dalmcwySOTBd]{Piège
     explosif} au joueur. A terme, un système de crafting sera mis en place pour
     créer automatiquement ces objets.</p><p>L'équipement est utilisable en
-    l'état par les joueurs.</p><p>Les actions permettent de réaliser les jets de
-    sauvegarde de la capacité.</p>
+    l'état par les joueurs et gère les DM et le test de sauvegarde.</p><p>L'action
+    permet de réaliser le test de détection du piège.</p>
   source: ''
   origin: Livre des règles p63
   slug: piege-explosif
@@ -35,41 +35,6 @@ system:
   actions:
     - source: Compendium.cof2-base.cof-2-base-items.Item.HqiEhtMiddsDQdlD
       indice: 0
-      label: 1/2 DM
-      chatFlavor: ''
-      img: icons/svg/d20-highlight.svg
-      type: buff
-      actionType: none
-      properties:
-        activable: true
-        temporary: false
-        noChargesUsed: false
-        visible: false
-        enabled: false
-        noManaCost: false
-      conditions:
-        - predicate: isLearned
-      resolvers:
-        - type: save
-          saveAbility: agi
-          saveDifficulty: '15'
-          target:
-            type: single
-            scope: all
-            number: 0
-          additionalEffect:
-            active: false
-            applyOn: success
-            statuses: []
-            duration: '0'
-            unit: round
-          bonusDiceAdd: false
-          malusDiceAdd: false
-          skill: {}
-          dmg: {}
-      modifiers: []
-    - source: Compendium.cof2-base.cof-2-base-items.Item.HqiEhtMiddsDQdlD
-      indice: 1
       label: Détecter le piège
       chatFlavor: ''
       img: icons/svg/d20-highlight.svg

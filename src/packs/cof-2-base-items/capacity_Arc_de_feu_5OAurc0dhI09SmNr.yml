@@ -11,10 +11,8 @@ system:
     moitié des DM. Les DM passent à 2d4° au rang 4.</p>
   inGame: >-
     <p>Le joueur sélectionne jusqu'à 3 cibles au contact puis clique sur
-    l'action pour lancer le sort qui va automatiquement lancer le jet de
-    dommages et le MJ pourra leur appliquer ces dommages.</p><p>La deuxième
-    action permet de réaliser le test de sauvegarde pour subir la moitié des DM
-    en cas de réussite.</p>
+    l'action pour lancer le sort qui va lancer les dommages et demander un test
+    de sauvegarde d'AGI. En cas de réussite, les DM sont divisés par 2.</p>
   source: ''
   origin: Livre des règles p103
   slug: arc-de-feu
@@ -47,7 +45,9 @@ system:
       conditions:
         - predicate: isLearned
       resolvers:
-        - type: auto
+        - type: save
+          saveAbility: agi
+          saveDifficulty: 10+@int
           dmg:
             formula: '@rang[1,1,1,2,2]d4° + @int'
           target:
@@ -63,41 +63,7 @@ system:
           bonusDiceAdd: false
           malusDiceAdd: false
           skill: {}
-      modifiers: []
-    - source: Compendium.cof2-base.cof-2-base-items.Item.5OAurc0dhI09SmNr
-      indice: 1
-      label: 1/2 DM
-      chatFlavor: ''
-      img: icons/svg/d20-highlight.svg
-      type: spell
-      actionType: none
-      properties:
-        activable: true
-        temporary: false
-        noChargesUsed: true
-        noManaCost: true
-        visible: false
-        enabled: false
-      conditions:
-        - predicate: isLearned
-      resolvers:
-        - type: save
-          saveAbility: agi
-          saveDifficulty: 10+@int
-          target:
-            type: single
-            number: 0
-            scope: all
-          additionalEffect:
-            active: false
-            applyOn: success
-            statuses: []
-            duration: '0'
-            unit: round
-          bonusDiceAdd: false
-          malusDiceAdd: false
-          skill: {}
-          dmg: {}
+          halfDmgOnSave: true
       modifiers: []
   cost: -1
   rank: 1
