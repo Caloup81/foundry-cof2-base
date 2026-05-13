@@ -80,11 +80,13 @@ system:
       subtype: ability
       target: agi
       value: '1'
+      choiceGroup: 1
     - type: feature
       source: Compendium.cof2-base.cof-2-base-items.Item.OyxuCyCG6FOjoobP
       subtype: ability
       target: per
       value: '1'
+      choiceGroup: 1
     - type: feature
       source: Compendium.cof2-base.cof-2-base-items.Item.OyxuCyCG6FOjoobP
       subtype: ability

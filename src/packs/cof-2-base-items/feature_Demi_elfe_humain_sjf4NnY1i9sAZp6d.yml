@@ -82,21 +82,25 @@ system:
       subtype: ability
       target: per
       value: '1'
+      choiceGroup: 1
     - type: feature
       source: Compendium.cof2-base.cof-2-base-items.Item.sjf4NnY1i9sAZp6d
       subtype: ability
       target: cha
       value: '1'
+      choiceGroup: 1
     - type: feature
       source: Compendium.cof2-base.cof-2-base-items.Item.sjf4NnY1i9sAZp6d
       subtype: ability
       target: for
       value: '-1'
+      choiceGroup: 2
     - type: feature
       source: Compendium.cof2-base.cof-2-base-items.Item.sjf4NnY1i9sAZp6d
       subtype: ability
       target: con
       value: '-1'
+      choiceGroup: 2
   paths:
     - Compendium.cof2-base.cof-2-base-items.Item.QHzX1RJ2bzXY3e6w
   capacities: []

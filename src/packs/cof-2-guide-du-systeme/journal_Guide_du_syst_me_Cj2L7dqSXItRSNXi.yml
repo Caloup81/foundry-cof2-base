@@ -1253,7 +1253,7 @@ pages:
             <li>
               <p>
                 <span class="gras">Glissez-déposez sur la feuille le Peuple du Personnage</span> présent dans le dossier du Compendium si vous utilisez les Peuples du Livre des règles
-                @UUID[Compendium.cof2-base.cof-2-base-items.Folder.pClI1itDE2etUmdy]{Peuples}. Supprimer les Modificateurs que vous n’avez pas choisis.
+                @UUID[Compendium.cof2-base.cof-2-base-items.Folder.pClI1itDE2etUmdy]{Peuples}. Si le Peuple possède des groupes de choix, une fenêtre vous permettra de sélectionner les bonus souhaités.
               </p>
             </li>
             <li>
@@ -1754,7 +1754,7 @@ pages:
       systemId: co2
       systemVersion: 13.344.0
       lastModifiedBy: 0VAX0I13R6BbGCjC
-      modifiedTime: 1778175444592
+      modifiedTime: 1778703191732
       createdTime: 1778175444592
     _key: '!journal.pages!Cj2L7dqSXItRSNXi.9Bn7F4sxyKm3TX74'
   - sort: 300000
@@ -1823,18 +1823,27 @@ pages:
             souvent possible les feuilles verrouillées afin de ne pas modifier ou supprimer des informations importantes de l'Objet par mégarde.
           </p>
 
-          <h3>Effets à supprimer</h3>
+          <h3>Choix de bonus</h3>
           <p class="alinea">
-            Dans certains Objets, souvent les traits et les profils configurés dans le Compendium,
-            <span class="gras">il faudra supprimer ou modifier des paramètres lorsque vous les glissez-déposez sur une feuille de Personnage.</span>
+            Certains Objets, souvent les traits de peuples et les profils configurés dans le Compendium,
+            <span class="gras">proposent un choix entre plusieurs bonus ou malus lorsque vous les glissez-déposez sur une feuille de Personnage.</span>
           </p>
-          <p class="alinea">Lorsqu'il faut faire un choix entre plusieurs bonus, il faudra supprimer les bonus que vous n'avez pas choisis.</p>
+          <p class="alinea">
+            Si des modificateurs de l'Objet sont configurés avec un <span class="gras">Groupe de choix</span> (Choix 1, Choix 2 ou Choix 3),
+            <span class="gras">une fenêtre de dialogue apparaîtra automatiquement au moment du glisser-déposer</span> pour vous permettre de sélectionner le bonus souhaité dans chaque groupe.
+            Seuls les modificateurs choisis seront appliqués au Personnage. Les modificateurs sans groupe de choix sont toujours appliqués automatiquement.
+          </p>
           <ul class="exemple">
             <p class="alinea">
-              Exemple : le Trait du <span class="gras">peuple Gnome</span> vous demande de choisir entre un bonus de +1 en Intelligence ou en Perception. Dans la feuille du Trait, les deux
-              options sont configurées donc si vous ne supprimez pas l'un des deux, votre personnage obtiendra un bonus de +1 dans les deux caractéristiques.
+              Exemple : le Trait du <span class="gras">peuple Gnome</span> vous demande de choisir entre un bonus de +1 en Intelligence ou en Perception.
+              Lorsque vous glissez le Trait sur la feuille du Personnage, une fenêtre vous propose de choisir entre ces deux options.
+              Le malus de -1 en Force, qui n'est pas dans un groupe de choix, est appliqué automatiquement.
             </p>
           </ul>
+          <p class="alinea">
+            <span class="gras italique">Note</span> : si un Objet n'a pas été configuré avec des groupes de choix, il faudra supprimer manuellement les modificateurs non souhaités
+            après le glisser-déposer, en déverrouillant la feuille de l'Objet sur le Personnage.
+          </p>
 
           <h3>Droits de visibilité</h3>
           <p class="alinea">Depuis la version 1.1.0, les feuilles Objets sont différentes en fonction du droit de visibilité paramétré.</p>
@@ -2067,6 +2076,11 @@ pages:
             une immunité quelconque, une augmentation ou diminution des Points de Magie, etc… Il n'y a pas de limite au nombre de Modificateurs que l'on peut ajouter.
           </p>
           <p class="alinea">
+            Lorsque la feuille du Profil n'appartient pas à un Personnage (dans le Compendium ou dans un dossier d'Objets), un champ supplémentaire
+            <span class="gras">Groupe de choix</span> est disponible pour chaque Modificateur. Ce champ permet de regrouper des modificateurs en choix mutuellement exclusifs :
+            lorsque le Profil est glissé-déposé sur un Personnage, une fenêtre de sélection apparaît pour chaque groupe de choix configuré.
+          </p>
+          <p class="alinea">
             Voir @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#modificateurs]{Modificateurs} pour plus d'informations.
           </p>
           <h3>Formations Martiales</h3>
@@ -2140,7 +2154,13 @@ pages:
             <span class="gras">Il est possible d’ajouter autant de Modificateurs que nécessaires.</span>.
           </p>
           <p class="alinea">
-            Voir @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#modificateurs]{Modificateurs} pour plus d'informations.
+            Lorsque la feuille du Trait n’appartient pas à un Personnage (dans le Compendium ou dans un dossier d’Objets), un champ supplémentaire
+            <span class="gras">Groupe de choix</span> est disponible pour chaque Modificateur. Ce champ permet de regrouper des modificateurs en choix mutuellement exclusifs :
+            lorsque le Trait est glissé-déposé sur un Personnage, une fenêtre de sélection apparaît pour chaque groupe de choix configuré.
+            Les modificateurs sans groupe de choix sont toujours appliqués.
+          </p>
+          <p class="alinea">
+            Voir @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#modificateurs]{Modificateurs} pour plus d’informations.
           </p>
           <p class="alinea">
             Il est possible de supprimer un Modificateur en cliquant sur l’icône
@@ -2869,7 +2889,7 @@ pages:
       systemId: co2
       systemVersion: 13.344.0
       lastModifiedBy: 0VAX0I13R6BbGCjC
-      modifiedTime: 1778175444932
+      modifiedTime: 1778703192065
       createdTime: 1778175444932
     _key: '!journal.pages!Cj2L7dqSXItRSNXi.e46m0KDmGFAP5USg'
   - sort: 400000
@@ -4384,551 +4404,591 @@ pages:
     image: {}
     text:
       format: 1
-      content: >-
-        <div class="journal-page-cof-base"><h2>Les Jets Principaux</h2><p
-        class="lettrine">A de nombreux moments, le système ouvrira des fenêtres
-        pour effectuer des jets de Dés qui vous permettront de modifier les
-        valeurs du Jet pour l’adapter à chaque situation. Ces fenêtres sont
-        aussi le moyen de vérifier que vous avez bien activé tous les éléments
-        de votre Personnage qui doivent vous servir dans la situation
-        (Capacités, Équipements…).</p><p class="alinea">Chaque fois que vous
-        faites une action, avec ou sans fenêtre intermédiaire, un Message sera
-        affiché dans le tchat de FoundryVTT. Ces messages vous donnent beaucoup
-        d’informations sur le Jet et aussi des options pour poursuivre les
-        Actions (appliquer les Dommages, utiliser un Point de Chance, activer ou
-        désactiver la Capacité…).</p><p class="alinea">Dans ce chapitre nous
-        allons voir les éléments présents sur les fenêtres ainsi que sur les
-        Messages du Chat.</p><h3>Options</h3><p class="alinea">En fonction des
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#options-du-systeme]{Options
-        du Système} sélectionnées, les fenêtres seront parfois différentes
-        :</p><h5>@UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#afficher-la-difficulte]{Afficher
-        la difficulté}</h5><p class="alinea">En fonction de l’option choisie, le
-        paramètre de Difficulté s’affichera <span class="gras">seulement pour le
-        MJ ou pour tout le monde</span>. Ainsi, la fenêtre pourra être
-        différente en fonction de votre statut dans la partie et les
-        informations du Message du Chat ne seront pas les mêmes
-        également.</p><h5>@UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#activer-les-jets-combines-attaque-et-dommages]{Activer
-        les jets combinés Attaque et Dommages}</h5><p class="alinea">De la même
-        manière, <span class="gras">cette option combinera une fenêtre d’Attaque
-        et une fenêtre de Dommages si elle est activée</span>. Dans ce cas, les
-        Dommages pourront être lancés automatiquement si le Jet d’Attaque est
-        réussi et ainsi afficher deux Messages dans le tchat directement.</p><p
-        class="alinea">Les options tactiques pour les attaques sont disponibles
-        uniquement si cette option est activée.</p><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_dommages.webp"
-        style="width:150px"></div><h5>@UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#afficher-les-boutons-de-dommages]{Afficher
-        les boutons de Dommages} pour tout le monde</h5><p class="alinea">Si
-        vous n’activez pas cette option, les joueurs ne verrons pas et ne
-        pourront pas interagir avec les boutons de Dommages dans le Messages du
-        Chat. Dans tous les cas le MJ verra les boutons et pourra les utiliser
-        pour appliquer les Dommages sur les cibles.</p><p><br></p><p
-        class="alinea">Pour expliquer les fenêtres et les Messages du Chat, nous
-        détaillerons chaque section comme si vous aviez activé la difficulté
-        pour tout le monde et les jets combinés attaque et dommages car cela
-        ajoute des paramètres.</p><h2>Jet de caractéristique</h2><h3>Fenêtre du
-        Jet</h3><p class="alinea">En cliquant sur le modificateur de
-        caractéristique dans
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.9Bn7F4sxyKm3TX74#entete]{Entête}
-        de la
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.9Bn7F4sxyKm3TX74#feuille-personnage]{Feuille
-        Personnage} ou la
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.9Bn7F4sxyKm3TX74#feuille-rencontre]{Feuille
-        Rencontre} , la fenêtre pour effectuer un jet de cette Caractéristique
-        apparait.</p><p class="alinea">Il est aussi possible de réaliser un test
-        de caractéristique depuis un journal ou un description grâce à un lien
-        personnalisé. Les
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.hAcXlQLmfEHtqwSS#demande-de-jet-dans-un-journal-(@test)]{Demande
-        de jet dans un journal (@Test)} permet de préparer dans le texte de la
-        campagne les jets de compétences demandés aux personnages et les
-        conséquences de la réussite ou de l'échec du test (application de
-        statuts, Dommages ou une description). Dans la description d'un Objet,
-        cette fonctionnalité permet aussi de gagner du temps et de la fluidité
-        durant la partie.</p><p class="alinea">Cette fenêtre de couleur bleu
-        pour la distinguer dans Attaques et des Dommages reprend toutes les
-        informations (bonus, malus, difficulté…) pour la caractéristique
-        choisie.</p><div class="image-centre"><img
-        src="modules\cof2-base\assets\guide\cof2_jets_competences.webp"></div><h4>Type
-        de jet</h4><p class="alinea">Les trois cercles permettent de voir et de
-        modifier le type de jet. Si des éléments de votre personnage vous
-        octroient <span class="gras">un dé bonus ou un dé malus</span>, le type
-        de jet sera automatiquement ajusté mais il est <span
-        class="gras">toujours possible de le modifier</span> sur cette
-        fenêtre.</p><h4>Difficulté</h4><p class="alinea">Si vous connaissez la
-        difficulté pour le test de caractéristique que vous faites, inscrivez-le
-        dans la case Difficulté. Contrairement aux jets d’attaque, ce champ
-        n’accepte <span class="gras">que des nombre entiers positifs</span>.
-        Vous ne pouvez pas écrire de variables (@oppose.atc, @cible.def…) car
-        cela interviendra pour les jets en opposition que nous aborderons un peu
-        plus loin.</p><h5>Jet opposé</h5><p class="alinea">Cette case à cocher
-        permet de réaliser un test opposé contre un token ciblé avant de
-        réaliser le jet de compétence. Choisissez la compétence que la cible
-        doit réalisé dans la liste déroulante qui apprait à la place de la case
-        de difficulté.</p><h4>Jet visible par</h4><p class="alinea">En
-        sélectionnant une option de visibilité des jets au dessus du cadre
-        d’écriture du Chat, ce champ s’adaptera automatiquement à ce choix. Vous
-        avez <span class="gras">la possibilité de modifier la visibilité du
-        jet</span> malgré ce choix grâce à cette liste
-        déroulante.</p><h4>Formule</h4><p class="alinea">Sur la ligne vous voyez
-        la formule réalisée pour le Jet de Caractéristique. La formule est
-        modifiable avec <span class="gras">une bonne partie
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#les-variables]{des
-        variables} de votre Personnage et des formules de jets de dés</span>.
-        Vous pouvez ajouter, par exemple, +1d4°, +@agi, +@niv…</p><p
-        class="alinea">De plus, la formule est modifiée automatiquement par le
-        type de jet choisi. Si vous modifiez sur la fenêtre, le type de jet,
-        cela annulera les modifications réalisées sur la formule. Modifiez donc
-        le type de jet en premier.</p><h4>Les bonus/malus</h4><p
-        class="alinea">Les deux champs "bonus" et "malus" vous <span
-        class="gras">permettent de rajouter à la main des bonus/malus
-        circonstanciels.</span> Utilisez la molette de la souris pour modifier
-        ces valeurs. Les nombres doivent être positifs pour la case Bonus et
-        négatifs pour la case Malus. Si vous écrivez "10" dans la case malus,
-        cela applique "+10" au test.</p><h4>Bonus total</h4><p class="alinea">Ce
-        champ additionne tous les bonus/malus ajoutés grâce aux compétences
-        sélectionnées dans la troisième section. Voir plus bas pour plus
-        d’informations.</p><h4>Critique</h4><p class="alinea">Dans de rares
-        situations, un Jet de Caractéristique pourra avoir une plage de critique
-        plus grande que le seul 20 naturel. Notez simplement dans ce champ <span
-        class="gras">le chiffre minimal qu’il faut faire sur le D20 pour obtenir
-        une réussite critique</span> (aucune restriction ne limite ce
-        chiffre).</p><h4>Modificateurs des actions</h4><div
-        class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_jets_competences_bonus.webp"></div><p
-        class="alinea">Comme nous l’avons vu dans le paramétrage des
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V]{Actions
-        et Effets}, <span class="gras">les Modificateurs de type
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#jet-de-competence]{Jet
-        de compétence} permettent de rajouter des bonus aux jets de
-        Caractéristiques</span> en fonction des situations.</p><p
-        class="alinea">C’est ici que les Modificateurs actifs de votre
-        personnage apparaîtront pour chaque Caractéristique sous forme de liste.
-        Vous voyez, <span class="gras">le bonus accordé, le nom de la Capacité
-        et de la Voie ainsi que les Notes écrites pour le Modificateur</span>.
-        Il vous suffit de cliquer sur les bonus de Compétences pour les activer
-        pour ce jet. Les Bonus actifs deviennent rouges.</p><p class="alinea">La
-        somme des bonus activés est notée dans le champ Bonus total comme abordé
-        précédemment.</p><h3>Message du Chat</h3><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_caracteristique.webp"></div><p
-        class="alinea">Le Message du Chat pour un Jet de Caractéristique est
-        très simple. Il affiche le nom de la caractéristique et le résultat du
-        Jet. Si vous affichez la Difficulté, il affichera également la
-        Difficulté et si le test est un échec critique, un échec, une réussite
-        ou une réussite critique.</p><h5>Difficulté et utilisation de Point de
-        Chance</h5><p class="alinea">Si vous afficher la difficulté et que votre
-        Jet est un Échec, <span class="gras">une image de trèfle apparaîtra à
-        droite de votre résultat dans le Message du Chat si vous disposez d’au
-        moins un Point de Chance.</span></p><p class="alinea">En cliquant sur
-        cette icône, vous utilisez un PC pour augmenter de 10 points votre
-        résultat. Si vous obtenez de ce fait un succès, le Message du tchat sera
-        modifié.</p><h5>Résultat des Dés</h5><p class="alinea">En bas de chaque
-        Message du Chat, une ligne affiche la formule lancée. En cliquant dessus
-        vous <span class="gras">pouvez déployer le résultat de chaque dé
-        lancé</span>.</p><p class="alinea">Normalement le dé est gris mais il
-        devient vert s’il a fait le résultat maximal ou rouge pour le résultat
-        minimal.</p><p class="alinea">Vérifier le résultat de chaque dé permet
-        de recalculer le résultat mais surtout de rajouter des bonus si vous
-        possédez une Capacité qui dit, par exemple, "chaque fois qu’un dé
-        obtient le résultat minimal, considérez-le comme le chiffre maximal du
-        dé".</p><h5>Compétence(s) utilisée(s)</h5><p class="alinea">Si vous avez
-        sélectionné des bonus de compétence au moment de faire le jet, ils
-        seront listés en bas du message dans le tchat.</p><h2>Jet
-        d'attaque</h2><h3>Fenêtre du Jet</h3><p class="alinea">Certains éléments
-        de la fenêtre d’Attaque et de Dommages sont identiques avec le Jet de
-        Caractéristique. La couleur rouge de la fenêtre vous montre que vous
-        réalisez une Attaque et/ou des Dommages contrairement à la fenêtre de
-        Caractéristique.</p><p class="alinea">Les paramètres de l’Attaque et des
-        Dommages de votre action sont déjà renseignés dans la fenêtre mais il
-        est possible de modifier chaque élément pour s’adapter à la situation
-        lors de vos parties.</p><div class="image-centre"><img
-        src="modules\cof2-base\assets\guide\cof2_jets_attaque.webp"></div><h4>Type
-        de jet</h4><p class="alinea">Les trois cercles permettent de voir et de
-        modifier le type de jet. Si des éléments de votre personnage vous
-        octroient <span class="gras">un dé bonus ou un dé malus</span>, le type
-        de jet sera automatiquement ajusté mais il est <span
-        class="gras">toujours possible de le modifier</span> sur cette
-        fenêtre.</p><p class="alinea">Le type de Jet est modifié par
-        l’activation de la case à cocher "<span class="gras">Temporaire</span>"
-        de la ligne du Jet de Dommages.</p><h4>Difficulté</h4><p
-        class="alinea">Il y a plusieurs possibilités qui apparaissent dans ce
-        champ en fonction de la configuration de l’action. Si rien ne s’affiche,
-        c’est soit que vous n’avez ciblé personne soit que la difficulté n’est
-        pas définie dans l’Action.</p><ul><li><p>Si vous voyez un nombre, cela
-        indique que la difficulté est "fixe" comme par exemple @cible.def qui
-        reprend le score de Défense de la cible.</p></li><li><p>Si le champ
-        affiche @oppose.X, cela signifie que vous faites un jet en opposition.
-        Ce type de jet sera expliqué plus bas.</p></li></ul><p
-        class="alinea">Une <span class="gras">info-bulle vous indique la
-        formule</span> inscrite dans la configuration de l’action.</p><h4>Jet
-        visible par</h4><p class="alinea">Ce champ reprend la formule inscrite
-        dans la configuration de l'Action <span class="gras">modifiée par le
-        type de Jet</span>, expliqué plus haut. Vous pouvez modifier la formule
-        de l'Attaque mais vos modifications seront annulées si vous changez le
-        type de Jet ensuite (et donc aussi le choix des Dommages Temporaires).
-        Commencez toujours par ce paramètre avant de modifier la formule à la
-        main. Vous pouvez ajouter des nombres, des variables et des formules de
-        Jet de Dés à cette formule. Une info-bulle, vous informe de la formule
-        inscrite dans la configuration de l'Action et des Bonus
-        éventuels.</p><h4>Jet d’Attaque</h4><p class="alinea">Ce champ reprend
-        <span class="gras">la formule inscrite dans la configuration de l’action
-        modifiée par le type de Jet</span>, expliqué plus haut. Vous pouvez
-        modifier la formule de l’Attaque mais vos modifications seront annulées
-        si vous changez le type de Jet ensuite (et donc aussi le choix des
-        Dommages Temporaires). Commencez toujours par ce paramètre avant de
-        modifier la formule à la main. Vous pouvez ajouter <span
-        class="gras">des nombres, des variables et des formules de Jet de
-        Dés</span> à cette formule.</p><p class="alinea">Une <span
-        class="gras">info-bulle vous informe de la formule</span> inscrite dans
-        la configuration de l’action et <span class="gras">des Bonus
-        éventuels.</span></p><h4>Bonus et Malus</h4><p class="alinea">Les deux
-        champs "bonus" et "malus" vous <span class="gras">permettent de rajouter
-        à la main des bonus/malus circonstanciels.</span> Utilisez la molette de
-        la souris pour modifier ces valeurs. Les nombres doivent être positifs
-        pour la case Bonus et négatifs pour la case Malus. Si vous écrivez "10"
-        dans la case malus, cela applique "+10" au test.</p><p
-        class="alinea"><span class="gras italique">Attention </span>: les cases
-        sont <span class="gras">modifiées par le choix de l’Option
-        Tactique</span>, que nous verrons un peu plus bas. Si vous modifiez ces
-        cases puis que vous changez d’option tactique, vos modifications seront
-        annulées. Commencez toujours par choisir le Type de Jet et l’Option
-        tactique avant de modifier à la main la formule ou les cases
-        Bonus/Malus.</p><h4>Critique</h4><p class="alinea">Un Jet d’Attaque
-        pourra avoir une plage de critique plus grande que le seul 20 naturel.
-        <span class="gras">Le chiffre noté correspond au nombre minimal que vous
-        devez faire sur le D20 pour obtenir une Réussite Critique</span>.</p><p
-        class="alinea">Ce nombre est déjà modifié par les Actions/Effets que
-        vous avez activées sur votre personnage. Notez simplement dans ce champ
-        le chiffre minimal qu’il faut faire sur le D20 pour obtenir une réussite
-        critique (aucune restriction ne limite ce chiffre).</p><p
-        class="alinea">Une info-bulle informe des effets qui influence la plage
-        de critique.</p><h4>Modificateurs de compétences</h4><p
-        class="alinea">Si le test de la résolution d'Attaque est une compétence
-        (@for par exemple), les modificateurs des Actions/Effets de l'Acteur
-        seront listés et sélectionnable ici comme pour un test de
-        Compétence.</p><h4>Jet de Dommages</h4><p class="alinea">Si vous avez
-        activé les jets combinés Attaque et Dommages dans les
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#options-du-systeme]{Options
-        du Système}, à cet endroit, la ligne du test de Dommages s’affiche.
-        Toutes les explications sur cette ligne sont détaillées plus
-        bas.</p><h4>Options Tactiques</h4><p class="alinea">Comme expliqué dans
-        le Livre de Règles
-        @UUID[Compendium.cof2-base.cof-2-base-regles.JournalEntry.SFIZ9i9XEt3gyYUC.JournalEntryPage.Dw9Ze41hgZ5MdKg2#options-tactiques]{Options
-        tactiques}, les joueurs peuvent, ou non, <span class="gras">utiliser une
-        option tactique pour augmenter leur chance de toucher ou leurs
-        Dommages</span>. De base, aucune Option Tactique n’est sélectionnée. En
-        cliquant sur les cercles vous pouvez appliquer les Bonus et Malus prévus
-        dans les Règles pour chaque option. Cela modifie la formule du Jet de
-        Dommages et l’une des cases Bonus/Malus. Pour chaque option, une <span
-        class="gras">info-bulle vous informe sur l’effet de cette option
-        tactique</span>.</p><h4>Les Cibles de l’Attaque</h4><p
-        class="alinea">Ici apparait le ou les Tokens que vous ciblez au moment
-        de l’Attaque. Une <span class="gras">info-bulle vous informe sur le nom
-        du Token</span>.</p><p class="alinea">Si la difficulté de l'attaque est
-        @cible.def alors la DEF de la ou des cibles sera inscrite en dessous du
-        portrait de la cible.</p><p class="alinea">Lorsque vous sélectionnez
-        <span class="gras">plusieurs cibles</span>, chaque cible est évaluée
-        individuellement. La <span class="gras">Défense de chaque cible est
-        comparée au résultat du Jet d’Attaque</span> pour déterminer si
-        l’attaque touche cette cible ou non. Ainsi, une même attaque peut
-        toucher certaines cibles et en rater d’autres.</p><p class="alinea">Le
-        <span class="gras">Message du Chat affichera une liste de cibles avec,
-        pour chacune, le résultat individuel</span> (Succès, Succès critique,
-        Échec ou Échec critique) ainsi que la Défense de la cible si la
-        difficulté est affichée.</p><h3>Jet en opposition</h3><p
-        class="alinea"><span class="gras">Le cas des Jets en Opposition est
-        légèrement différent</span>. Si votre action a une difficulté sous forme
-        de @oppose.X (par exemple, @oppose.cha pour un test opposé à un jet de
-        Charisme), le résultat de l’action ne sera immédiat.</p><p
-        class="alinea"><span class="gras">Un bouton "jet opposé" apparaîtra à la
-        place de la Difficulté dans le Message du Chat</span>. En cliquant
-        dessus, un jet sera effectué et le résultat de l’action
-        apparaîtra.</p><p class="alinea">En cas <span class="gras">d’attaque
-        multi-cibles avec jet en opposition</span>, un bouton "Jet opposé"
-        apparaît pour chaque cible dans le Message du Chat. Chaque défenseur
-        peut effectuer son propre jet en opposition indépendamment.</p><p
-        class="alinea">Le défenseur peut <span class="gras">utiliser un Point de
-        Chance</span> pour augmenter son jet de 10 points si le résultat de
-        l’opposition est un succès pour l’attaquant et que le défenseur dispose
-        de Points de Chance.</p><h3>Le Message d'Attaque</h3><div
-        class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_attaque_resultat.webp"></div><p
-        class="alinea">Le résultat de l'Attaque est affiché dans le tchat de
-        FoundryVTT. Ce message <span class="gras">indique le nom de l'Équipement
-        ou de la Capacité ainsi que le nom de l'Action utilisée</span>. Si
-        l'action possède un Message tchat défini (voir la section
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V]{Actions
-        et Effets}), alors c'est ce texte qui sera affiché.</p><h4>Le cadre du
-        nom</h4><p class="alinea">Le cadre avec le nom de l'Objet et de
-        l'Action/Effet est dépliable. Si vous avez <span class="gras">un Type de
-        Jet différent de standard et que vous utilisez une des trois Options
-        Tactiques alors cela sera indiqué </span>par des icônes à droite du
-        cadre ou en toutes lettres quand le cadre est déplié.</p><p
-        class="alinea">La ligne avec la formule du test ainsi que le résultat de
-        chaque dé est aussi présente lorsque le cadre est déplié.</p><p
-        class="alinea">Vérifier le résultat de chaque dé permet de recalculer le
-        résultat mais surtout de rajouter des bonus si vous possédez une
-        Capacité qui dit, par exemple, "chaque fois qu'un dé obtient le résultat
-        minimal, considérez-le comme le chiffre maximal du dé".</p><h5>Résultat
-        de l'attaquant</h5><p class="alinea">Le nombre qui est affiché ensuite
-        est le résultat total de l'attaque. Si une icône <i class="fa-regular
-        fa-clover"></i> s'affiche après le résultat, cela signifie que
-        l'attaquant peut utiliser un point de Chance pour ajouter +10 à son
-        attaque.</p><h5>La liste des cibles</h5><p class="alinea">Ensuite, dans
-        une section qui est dépliable, on trouve la liste de toutes les cibles
-        de l'attaque.</p><p class="alinea">Pour chaque cible est affiché une
-        icône représentant si l'attaque est réussie, ratée, une réussite
-        critique ou un échec critique, l'image du token et le nom du token. A
-        droite du nom, la difficulté aura plusieurs affichages différents
-        :</p><ul><li><p><span class="gras">Affichage de la Difficulté</span> :
-        si vous avez activé l'affichage de la Difficulté dans les
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#options-du-systeme]{Options
-        du Système} lors votre jet d'Attaque sera comparé à la Difficulté (si
-        elle est renseignée). Dans ce cas, le Message du tchat vous informera si
-        votre jet est un Succès critique, un Succès, un Échec ou un Échec
-        critique.</p></li></ul><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_oppose.webp"></div><ol><li><p><span
-        class="gras">Jet en Opposition</span> : Si la Difficulté est sous forme
-        de "@oppose.X" alors un bouton s'affiche dans le Message du tchat. Il
-        est nommé "Jet opposé". En cliquant sur ce bouton, le jet opposé sera
-        effectué comme expliqué plus haut dans la section
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.7BoZ8Un0GrShNPtF#jet-en-opposition]{Jet
-        en opposition}.</p></li><li><p><span class="gras">L'affichage d'une
-        icône <i class="fa-regular fa-clover"></i> </span>signifie que la cible
-        peut utiliser un Point de Chance pour améliorer son résultat au test
-        opposé. <span class="gras">Les résultats contre chaque cible sont
-        recalculés individuellement</span> : certaines cibles qui étaient ratées
-        peuvent ainsi devenir touchées. Si cela génère au moins un succès, le
-        jet de Dommages sera lancé ou mis à jour.</p></li></ol><h3>Effets
-        supplémentaires</h3><p class="alinea">Afin de ne pas faire des Messages
-        dans le tchat qui prennent toute la hauteur de la fenêtre,<span
-        class="gras"> les
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#effet-supplementaire]{Effet
-        Supplémentaire} ne sont pas affichés dans le Message du tchat</span>.
-        Lorsque l'Attaque est réalisée, il faudra regarder dans
-        l'@UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.9Bn7F4sxyKm3TX74#onglet-effets]{Onglet
-        Effets} pour vérifier que l'Effet Supplémentaire a bien été appliqué.
-        L'info-bulle vous dira les Effets appliqués.</p><h2>Jet de
-        dommages</h2><h3>Fenêtre de Dommages</h3><p class="alinea">Si vous
-        effectuez un Jet de Dommages en cliquant sur l’icône <i
-        class="fa-regular fa-hand-fist"></i> ou si vous avez
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#activer-les-jets-combines-attaque-et-dommages]{Activé
-        les jets combinés Attaque et Dommages} dans les
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#options-du-systeme]{Options
-        du Système}, l<span class="gras">a ligne pour les Dommages est
-        identique.</span></p><div class="image-centre"><img
-        src="modules\cof2-base\assets\guide\cof2_jets_dommages.webp"></div><h4>Formule
-        de Dommages</h4><p class="alinea">Dans cette case est inscrite <span
-        class="gras">la formule configurée dans l’action et les bonus ou malus
-        éventuels</span>. Il est <span class="gras">possible de modifier à la
-        main cette formule pour adapter le Jet à la situation en
-        jeu</span>.</p><p class="alinea">Ce champ peut recevoir <span
-        class="gras">des nombres, des variables ou des formules de Jet de
-        Dés</span> et toutes combinaisons de ces éléments.</p><p
-        class="alinea"><span class="gras">Attention</span> : cette case est
-        <span class="gras">modifiée automatiquement par les Options
-        Tactiques</span>, comme expliqué plus haut. Ainsi si vous modifiez à la
-        main cette case puis que vous sélectionnez une option tactique, vos
-        modifications seront effacées.</p><h4>Bonus/Malus</h4><p
-        class="alinea">Les deux champs "bonus" et "malus" vous <span
-        class="gras">permettent de rajouter à la main des bonus/malus
-        circonstanciels.</span></p><p class="alinea">Il est possible d’écrire
-        <span class="gras">des nombres entiers</span> dans les deux champs. Le
-        champ "malus" est de base négatif que vous écriviez "10" ou "-10".</p><p
-        class="alinea">Utilisez la molette de la souris pour modifier ces champs
-        rapidement.</p><h4>Temporaire</h4><p class="alinea">Cette case à cocher
-        <span class="gras">permet de déterminer si les Dommages effectués sont
-        des Dommages létaux ou Temporaires</span>. Si la case est déjà cochée,
-        c’est que votre arme inflige des DM Temporaires.</p><p
-        class="alinea">Dans tous les cas, il est possible de cocher ou de
-        décocher cette case.</p><p class="alinea">Si vous souhaitez infliger des
-        Dommages Temporaires avec une arme qui ne le permet pas, le type de Jet
-        sera changé en "<span class="gras">avec dé Malus</span>".</p><p
-        class="alinea">En infligeant les Dommages à la cible grâce aux icônes du
-        Message du Chat, <span class="gras">les Dommages Temporaires seront
-        ajoutés aux "DM Temp." de la cible et le Modificateur de Force de la
-        cible sera soustrait du total de Dommages subis</span>.</p><h4>Options
-        Tactiques</h4><p class="alinea">Si vous avez activé pour l'attaque une
-        des options tactique, vous pouvez le faire également sur la fenêtre de
-        Dommages afin d'appliquer les bonus ou malus aux Dommages sur le
-        test.</p><h4>Les Cibles de l'Attaque</h4><p class="alinea">Ici apparait
-        le ou les Tokens que vous ciblez au moment du jet de Dommages. Une
-        info-bulle vous informe sur le nom du Token</p><h3>Message des
-        Dommages</h3><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_dommages.webp"></div><p
-        class="alinea">Le Message de Dommages dans le tchat présente <span
-        class="gras">l’image et le nom de l’Équipement ou de la Capacité
-        utilisé</span> dans un en-tête dépliable. En cliquant sur l’en-tête, les
-        détails du jet (formule et résultat des dés) sont affichés.</p><h4>Total
-        de Dommages</h4><p class="alinea"><span class="gras">Le nombre affiché
-        indique le résultat brut du Jet de Dommages</span>, sans multiplicateur
-        appliqué.</p><h4>Temporaire</h4><p class="alinea"><span class="gras">La
-        case à cocher Temp.</span> au niveau de la carte permet de définir si
-        les Dommages infligés sont temporaires pour toutes les cibles. Si
-        l’équipement est configuré pour infliger des DM temporaires, la case est
-        automatiquement cochée. Les Dommages Temporaires sont ajoutés aux "DM
-        Temp." de chaque cible et le <span class="gras">Modificateur de Force de
-        la cible est soustrait du total de Dommages subis</span>.</p><h4>Section
-        d’Application des Dommages</h4><p class="alinea">La section
-        d’application est <span class="gras">dépliable</span> et propose deux
-        modes :</p><ul><li><p><span class="gras">Ciblées</span> : affiche la
-        liste des cibles de l’attaque avec leur portrait, leur nom et les
-        contrôles individuels. Ce mode est sélectionné par défaut si des cibles
-        étaient ciblées lors de l’attaque.</p></li><li><p><span
-        class="gras">Sélectionnées</span> : permet de sélectionner manuellement
-        des Tokens sur la scène pour leur appliquer les
-        Dommages.</p></li></ul><h4>Contrôles par cible</h4><p
-        class="alinea">Pour chaque cible, une ligne affiche les contrôles
-        suivants :</p><ul><li><p><span class="gras">RD</span> : case à cocher
-        individuelle. Cochée par défaut, elle applique la Résistance aux
-        Dommages propre à cette cible.</p></li><li><p><span class="gras"><i
-        class="fa-solid fa-heart"></i> (Soin)</span> : les Dommages deviennent
-        des soins pour cette cible.</p></li><li><p><span class="gras">0</span> :
-        aucun Dommage n’est infligé. Sélectionné automatiquement si l’attaque a
-        raté cette cible.</p></li><li><p><span class="gras">x½</span> : la
-        moitié des Dommages est infligée. Utile pour les cibles résistantes ou
-        ayant réussi un jet de sauvegarde.</p></li><li><p><span
-        class="gras">x1</span> : les Dommages normaux sont infligés. Sélectionné
-        par défaut si l’attaque touche cette cible (réussite
-        normale).</p></li><li><p><span class="gras">x2</span> : le double des
-        Dommages est infligé. Sélectionné automatiquement en cas de réussite
-        critique contre cette cible.</p></li></ul><p class="alinea">Le <span
-        class="gras">montant calculé est affiché à côté de chaque cible</span>
-        et tient compte du multiplicateur choisi et de la RD individuelle si
-        elle est cochée. Il est possible de <span class="gras">modifier le
-        multiplicateur de chaque cible avant d’appliquer les
-        Dommages</span>.</p><p class="alinea">Un unique <span
-        class="gras">bouton "Appliquer"</span> en bas de la section applique les
-        Dommages calculés pour toutes les cibles en une seule action. Les Effets
-        Supplémentaires sont également appliqués à ce moment-là,
-        individuellement sur chaque cible touchée.</p><h5>Multiplicateurs de
-        Critique</h5><p class="alinea"><span class="gras">Si votre Attaque doit
-        infliger des Dommages critiques supérieurs au double des DM, il faudra
-        faire une manipulation supplémentaire lors de l'application des
-        Dommages.</span></p><ul class="exemple"><li><p class="alinea"><span
-        class="gras">Exemple pour des Dommages critique x3</span> : Après
-        application des dommages avec le bouton x2 sélectionné, cliquez sur les
-        boutons x1 pour les cibles touchées, désélectionnez la case RD et
-        appliquez à nouveau.</p></li></ul><p class="alinea">Ainsi, lorsque vous
-        devez utiliser plusieurs fois une icône de Dommages ou plusieurs icones
-        pour une même cible, <span class="gras">il faut décocher la case RD
-        avant de cliquer sur la deuxième icône de Dommages</span>.</p><h3>Jet de
-        sauvegarde</h3><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_sauvegarde_initial.webp"></div><p
-        class="alinea">Pour les tests de sauvegarde, il n'y a pas de fenêtre qui
-        s'affiche pour le personnage qui réalise l'action. En sélectionnant la
-        ou les cibles et en cliquant sur l'action, un message sera directement
-        envoyé dans le tchat.</p><p class="alinea">Le message du tchat affiche
-        la caractéristique demandée et la difficulté du test. Si une formule de
-        Dommages est configurée sur la Résolution de type
-        @UUID[.a0cY3q3XV4o8Y13V#sauvegarde]{Sauvegarde}, le total des Dommages
-        est affiché sous la difficulté.</p><h4>Cibles et jets individuels</h4><p
-        class="alinea"><span class="gras">Chaque cible apparaît dans une liste
-        avec un bouton "Sauvegarde" individuel </span>(une info-bulle indique la
-        compétence demandée).</p><p class="alinea">Le propriétaire de chaque
-        cible (ou le MJ) peut cliquer sur le bouton pour effectuer le jet de
-        sauvegarde de cette cible. Une fenêtre de
-        @UUID[.#jet-de-caracteristique]{Jet de caractéristique} s'ouvre pour
-        sélectionner les éventuels bonus à appliquer.</p><div
-        class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_sauvegarde_resultat.webp"></div><p
-        class="alinea">Le résultat du jet est affiché sur la ligne de la cible
-        avec une icône colorée indiquant le succès ou l'échec. Si la cible
-        échoue et dispose de Points de Chance, une icône <i class="fa-regular
-        fa-clover"></i> lui permet d'utiliser un PC pour tenter de transformer
-        l'échec en succès.</p><h4>Dommages liés au test</h4><p class="alinea">Si
-        une formule de Dommages est configurée sur la Résolution de type
-        Sauvegarde, des contrôles de Dommages par cible apparaissent lorsque le
-        jet est effectué. <span class="gras">Ces contrôles fonctionnent de la
-        même manière que pour le @UUID[.#message-des-dommages$1]{Message des
-        Dommages}</span> : RD individuelle, multiplicateurs (soin, 0, x½, x1,
-        x2) et bouton "Appliquer".</p><p class="alinea"><span class="gras">Si
-        l'option "Dommages moitié sur réussite" est activée dans la
-        Résolution</span>, une cible qui réussit son jet de sauvegarde aura le
-        multiplicateur x½ activé pour recevoir seulement la moitié des Dommages
-        et une cible qui échoue reçoit les Dommages complets (x1). En cas de
-        réussite critique, la cible ne reçoit aucun Dommage (multiplicateur
-        0).</p><h4>Effets Supplémentaires</h4><p class="alinea"><span
-        class="gras">Les @UUID[.a0cY3q3XV4o8Y13V#effet-supplementaire]{Effets
-        Supplémentaires} de la Résolution sont appliqués individuellement sur
-        chaque cible en fonction de son résultat de sauvegarde au moment de
-        cliquer sur le bouton "Appliquer".</span></p><h2>Jet de soins et
-        Consommable</h2><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_recuperations.webp"
-        style="width:150px"></div><h3>Récupération Rapide et Complète</h3><p
-        class="alinea"><span>Lorsque vous effectuez une Récupération Rapide <i
-        class="fa-solid fa-mug-saucer"></i> et lorsque vous souhaitez dépenser
-        votre DR après une Récupération Complète <i class="fa-solid
-        fa-bed"></i>, un Message de Chat apparait.</span></p><p
-        class="alinea">Il vous <span class="gras">informe du nombre de Points de
-        Vigueur que vous récupérez</span>. Ces PV sont <span
-        class="gras">ajoutés automatiquement</span> à votre personnage. Il n’y a
-        donc aucune icône pour appliquer les soins dans le Message du
-        Chat.</p><p class="alinea">Un deuxième message uniquement pour le MJ
-        résumera la récupération effectuée.</p><h3>Action de Soin</h3><p
-        class="alinea">Si vous consommez une potion ou tout autre Capacité ou
-        Équipement qui possède une Action avec une
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#resolutions]{Résolutions}
-        de type
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#soin]{Soin},
-        un Message Chat sera affiché.</p><p class="alinea">Il vous <span
-        class="gras">indique le résultat du Jet de Soin et les Points de
-        Vigueurs sont ajoutés automatiquement</span> à votre Personnage ou à la
-        cible sélectionnée si vous avez configuré la Résolution avec une cible
-        différente de "Soi-même".</p><p class="alinea">Un deuxième message
-        uniquement pour le MJ résumera le soin effectué.</p><h3>Action
-        Consommable</h3><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_consommable.webp"
-        style="width:150px"></div><p class="alinea"><span>Si vous définissez une
-        Action avec une Résolution de type
-        @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#consommable]{Consommable},
-        lorsque vous réalisez l’action, un message sera envoyé dans le tchat
-        pour </span><span class="gras">informer que vous avez consommé quelque
-        chose</span>.</p><p class="alinea"><span class="gras italique">Attention
-        :</span> si vous configurez un Équipement avec <span class="gras">le
-        Sous-type "consommable" ET avec une Résolution "consommable"</span>, à
-        chaque utilisation de l'Équipement le système vous fera consommer deux
-        unités d'un coup mais avec une seule fois l'Effet.</p><h3>Application
-        d'un effet</h3><p class="alinea">Lorsque qu'un effet est appliqué sur
-        une cible, un message dans le tchat pour indiquer l'acteur qui a réalisé
-        l'action, le nom de l'effet qui est appliqué et la cible de
-        l'effet.</p><h2>Description dans le chat</h2><div
-        class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_description.webp"
-        style="width:150px"></div><p class="alinea">A chaque fois que vous voyez
-        l’icône <i class="fa-solid fa-message"></i>, cela signifie que vous
-        pouvez envoyer des informations dans le tchat uniquement pour le
-        MJ.</p><p class="alinea">Dans tous les cas, le Message affichera <span
-        class="gras">l’image, le nom et la description de l’Objet</span>.</p><p
-        class="alinea"><span class="gras">Si l’Objet possède une Action/Effet
-        associé alors un ou plusieurs boutons apparaîtront en bas du
-        Message.</span> Ils permettent d’interagir avec l’Objet (activer ou
-        désactiver l’Effet, Attaquer ou lancer les Dommages, utiliser
-        l’Objet…).</p><p class="alinea"><span class="gras">La description d’un
-        objet dans le tchat est tout le temps envoyé uniquement au MJ et au PJ
-        qui envoie le message</span>. C’est pour cela que le fond du message est
-        de couleur rouge, comme nous le verrons juste après.</p><h3>Jet
-        secret</h3><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_secret.webp"
-        style="width:150px"></div><p class="alinea">Une distinction visuelle est
-        faite dans le tchat en fonction de la visibilité du
-        Message.</p><h4>Message visible de tout le monde</h4><p
-        class="alinea">Les messages visibles par tout le monde ont un fond
-        "parchemin" en thème clair ou "noir" en thème sombre.</p><h4>Message
-        pour le MJ et moi</h4><p class="alinea">Lorsque le message est envoyé
-        seulement au MJ et au joueur réalisant l’action, <span class="gras">le
-        fond du message devient rouge</span>. Le contour du message est
-        identique au messages publics.</p><h4>Message juste pour moi ou juste
-        pour le MJ</h4><div class="image-guide"><img
-        src="modules\cof2-base\assets\guide\cof2_tchat_revele.webp"
-        style="width:150px"></div><p class="alinea">Lorsque le message est
-        envoyé uniquement au MJ ou uniquement à "soi-même", <span
-        class="gras">le fond du message est rouge également ET le contour du
-        message devient violacé</span> en thème clair <span class="gras">ou
-        rouge</span> en thème sombre.</p><p class="alinea"><span class="gras
-        italique">Attention</span> : le MJ est prévenu que vous avez envoyé un
-        message juste pour vous même si le résultat est remplacé par des points
-        d’interrogation. De la même manière si vous réalisez une action visible
-        uniquement du MJ, vous verrez le message mais le résultat sera remplacé
-        par des points d’interrogation.</p></div>
+      content: |-
+        <div class="journal-page-cof-base">
+          <h2>Les Jets Principaux</h2>
+          <p class="lettrine">
+            A de nombreux moments, le système ouvrira des fenêtres pour effectuer des jets de Dés qui vous permettront de modifier les valeurs du Jet pour l’adapter à chaque situation. Ces
+            fenêtres sont aussi le moyen de vérifier que vous avez bien activé tous les éléments de votre Personnage qui doivent vous servir dans la situation (Capacités, Équipements…).
+          </p>
+          <p class="alinea">
+            Chaque fois que vous faites une action, avec ou sans fenêtre intermédiaire, un Message sera affiché dans le tchat de FoundryVTT. Ces messages vous donnent beaucoup
+            d’informations sur le Jet et aussi des options pour poursuivre les Actions (appliquer les Dommages, utiliser un Point de Chance, activer ou désactiver la Capacité…).
+          </p>
+          <p class="alinea">Dans ce chapitre nous allons voir les éléments présents sur les fenêtres ainsi que sur les Messages du Chat.</p>
+
+          <h3>Options</h3>
+          <p class="alinea">
+            En fonction des @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#options-du-systeme]{Options du Système}
+            sélectionnées, les fenêtres seront parfois différentes :
+          </p>
+          <h5>@UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#afficher-la-difficulte]{Afficher la difficulté}</h5>
+          <p class="alinea">
+            En fonction de l’option choisie, le paramètre de Difficulté s’affichera
+            <span class="gras">seulement pour le MJ ou pour tout le monde</span>. Ainsi, la fenêtre pourra être différente en fonction de votre statut dans la partie et les informations du
+            Message du Chat ne seront pas les mêmes également.
+          </p>
+          <h5>
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#activer-les-jets-combines-attaque-et-dommages]{Activer les
+            jets combinés Attaque et Dommages}
+          </h5>
+          <p class="alinea">
+            De la même manière,
+            <span class="gras">cette option combinera une fenêtre d’Attaque et une fenêtre de Dommages si elle est activée</span>. Dans ce cas, les Dommages pourront être lancés
+            automatiquement si le Jet d’Attaque est réussi et ainsi afficher deux Messages dans le tchat directement.
+          </p>
+          <p class="alinea">Les options tactiques pour les attaques sont disponibles uniquement si cette option est activée.</p>
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_dommages.webp" style="width:150px"></div>
+          <h5>
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#afficher-les-boutons-de-dommages]{Afficher les boutons de
+            Dommages} pour tout le monde
+          </h5>
+          <p class="alinea">
+            Si vous n’activez pas cette option, les joueurs ne verrons pas et ne pourront pas interagir avec les boutons de Dommages dans le Messages du Chat. Dans tous les cas le MJ verra
+            les boutons et pourra les utiliser pour appliquer les Dommages sur les cibles.
+          </p>
+          <br>
+          <p class="alinea">
+            Pour expliquer les fenêtres et les Messages du Chat, nous détaillerons chaque section comme si vous aviez activé la difficulté pour tout le monde et les jets combinés attaque
+            et dommages car cela ajoute des paramètres.
+          </p>
+
+          
+          <h2>Jet de caractéristique</h2>
+          <h3>Fenêtre du Jet</h3>
+
+          <p class="alinea">
+            En cliquant sur le modificateur de caractéristique dans
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.9Bn7F4sxyKm3TX74#entete]{Entête} de la
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.9Bn7F4sxyKm3TX74#feuille-personnage]{Feuille Personnage} ou la
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.9Bn7F4sxyKm3TX74#feuille-rencontre]{Feuille Rencontre} , la fenêtre pour
+            effectuer un jet de cette Caractéristique apparait.
+          </p>
+          <p class="alinea">
+            Il est aussi possible de réaliser un test de caractéristique depuis un journal ou un description grâce à un lien personnalisé. Les
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.hAcXlQLmfEHtqwSS#demande-de-jet-dans-un-journal-(@test)]{Demande de jet dans un
+            journal (@Test)} permet de préparer dans le texte de la campagne les jets de compétences demandés aux personnages et les conséquences de la réussite ou de l'échec du test
+            (application de statuts, Dommages ou une description). Dans la description d'un Objet, cette fonctionnalité permet aussi de gagner du temps et de la fluidité durant la partie.
+          </p>
+          <p class="alinea">
+            Cette fenêtre de couleur bleu pour la distinguer dans Attaques et des Dommages reprend toutes les informations (bonus, malus, difficulté…) pour la caractéristique choisie.
+          </p>
+          <div class="image-centre"><img src="modules\cof2-base\assets\guide\cof2_jets_competences.webp"></div>
+          <h4>Type de jet</h4>
+          <p class="alinea">
+            Les trois cercles permettent de voir et de modifier le type de jet. Si des éléments de votre personnage vous octroient <span class="gras">un dé bonus ou un dé malus</span>, le
+            type de jet sera automatiquement ajusté mais il est <span class="gras">toujours possible de le modifier</span> sur cette fenêtre.
+          </p>
+          <h4>Difficulté</h4>
+          <p class="alinea">
+            Si vous connaissez la difficulté pour le test de caractéristique que vous faites, inscrivez-le dans la case Difficulté. Contrairement aux jets d’attaque, ce champ n’accepte
+            <span class="gras">que des nombre entiers positifs</span>. Vous ne pouvez pas écrire de variables (@oppose.atc, @cible.def…) car cela interviendra pour les jets en opposition
+            que nous aborderons un peu plus loin.
+          </p>
+          <h5>Jet opposé</h5>
+          <p class="alinea">
+            Cette case à cocher permet de réaliser un test opposé contre un token ciblé avant de réaliser le jet de compétence. Choisissez la compétence que la cible doit réalisé dans la
+            liste déroulante qui apprait à la place de la case de difficulté.
+          </p>
+
+          <h4>Jet visible par</h4>
+          <p class="alinea">
+            En sélectionnant une option de visibilité des jets au dessus du cadre d’écriture du Chat, ce champ s’adaptera automatiquement à ce choix. Vous avez
+            <span class="gras">la possibilité de modifier la visibilité du jet</span> malgré ce choix grâce à cette liste déroulante.
+          </p>
+          <h4>Formule</h4>
+          <p class="alinea">
+            Sur la ligne vous voyez la formule réalisée pour le Jet de Caractéristique. La formule est modifiable avec
+            <span class="gras">une bonne partie @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#les-variables]{des variables} de votre
+              Personnage et des formules de jets de dés</span>. Vous pouvez ajouter, par exemple, +1d4°, +@agi, +@niv…
+          </p>
+          <p class="alinea">
+            De plus, la formule est modifiée automatiquement par le type de jet choisi. Si vous modifiez sur la fenêtre, le type de jet, cela annulera les modifications réalisées sur la
+            formule. Modifiez donc le type de jet en premier.
+          </p>
+          <h4>Les bonus/malus</h4>
+          <p class="alinea">
+            Les deux champs "bonus" et "malus" vous
+            <span class="gras">permettent de rajouter à la main des bonus/malus circonstanciels.</span> Utilisez la molette de la souris pour modifier ces valeurs. Les nombres doivent être
+            positifs pour la case Bonus et négatifs pour la case Malus. Si vous écrivez "10" dans la case malus, cela applique "+10" au test.
+          </p>
+          <h4>Bonus total</h4>
+          <p class="alinea">Ce champ additionne tous les bonus/malus ajoutés grâce aux compétences sélectionnées dans la troisième section. Voir plus bas pour plus d’informations.</p>
+          <h4>Critique</h4>
+          <p class="alinea">
+            Dans de rares situations, un Jet de Caractéristique pourra avoir une plage de critique plus grande que le seul 20 naturel. Notez simplement dans ce champ
+            <span class="gras">le chiffre minimal qu’il faut faire sur le D20 pour obtenir une réussite critique</span>
+            (aucune restriction ne limite ce chiffre).
+          </p>
+          <h4>Modificateurs des actions</h4>
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_jets_competences_bonus.webp"></div>
+          <p class="alinea">
+            Comme nous l’avons vu dans le paramétrage des @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V]{Actions et
+            Effets},
+            <span class="gras">les Modificateurs de type @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#jet-de-competence]{Jet de
+              compétence} permettent de rajouter des bonus aux jets de Caractéristiques</span>
+            en fonction des situations.
+          </p>
+          <p class="alinea">
+            C’est ici que les Modificateurs actifs de votre personnage apparaîtront pour chaque Caractéristique sous forme de liste. Vous voyez,
+            <span class="gras">le bonus accordé, le nom de la Capacité et de la Voie ainsi que les Notes écrites pour le Modificateur</span>. Il vous suffit de cliquer sur les bonus de
+            Compétences pour les activer pour ce jet. Les Bonus actifs deviennent rouges.
+          </p>
+          <p class="alinea">La somme des bonus activés est notée dans le champ Bonus total comme abordé précédemment.</p>
+
+          <h3>Message du Chat</h3>
+
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_caracteristique.webp"></div>
+          <p class="alinea">
+            Le Message du Chat pour un Jet de Caractéristique est très simple. Il affiche le nom de la caractéristique et le résultat du Jet. Si vous affichez la Difficulté, il affichera
+            également la Difficulté et si le test est un échec critique, un échec, une réussite ou une réussite critique.
+          </p>
+          <h5>Difficulté et utilisation de Point de Chance</h5>
+          <p class="alinea">
+            Si vous afficher la difficulté et que votre Jet est un Échec,
+            <span class="gras">une image de trèfle apparaîtra à droite de votre résultat dans le Message du Chat si vous disposez d’au moins un Point de Chance.</span>
+          </p>
+          <p class="alinea">
+            En cliquant sur cette icône, vous utilisez un PC pour augmenter de 10 points votre résultat. Si vous obtenez de ce fait un succès, le Message du tchat sera modifié.
+          </p>
+          <h5>Résultat des Dés</h5>
+          <p class="alinea">
+            En bas de chaque Message du Chat, une ligne affiche la formule lancée. En cliquant dessus vous
+            <span class="gras">pouvez déployer le résultat de chaque dé lancé</span>.
+          </p>
+          <p class="alinea">Normalement le dé est gris mais il devient vert s’il a fait le résultat maximal ou rouge pour le résultat minimal.</p>
+          <p class="alinea">
+            Vérifier le résultat de chaque dé permet de recalculer le résultat mais surtout de rajouter des bonus si vous possédez une Capacité qui dit, par exemple, "chaque fois qu’un dé
+            obtient le résultat minimal, considérez-le comme le chiffre maximal du dé".
+          </p>
+          <h5>Compétence(s) utilisée(s)</h5>
+          <p class="alinea">Si vous avez sélectionné des bonus de compétence au moment de faire le jet, ils seront listés en bas du message dans le tchat.</p>
+
+          
+          <h2>Jet d'attaque</h2>
+
+          <h3>Fenêtre du Jet</h3>
+          <p class="alinea">
+            Certains éléments de la fenêtre d’Attaque et de Dommages sont identiques avec le Jet de Caractéristique. La couleur rouge de la fenêtre vous montre que vous réalisez une
+            Attaque et/ou des Dommages contrairement à la fenêtre de Caractéristique.
+          </p>
+          <p class="alinea">
+            Les paramètres de l’Attaque et des Dommages de votre action sont déjà renseignés dans la fenêtre mais il est possible de modifier chaque élément pour s’adapter à la situation
+            lors de vos parties.
+          </p>
+          <div class="image-centre"><img src="modules\cof2-base\assets\guide\cof2_jets_attaque.webp"></div>
+          <h4>Type de jet</h4>
+          <p class="alinea">
+            Les trois cercles permettent de voir et de modifier le type de jet. Si des éléments de votre personnage vous octroient <span class="gras">un dé bonus ou un dé malus</span>, le
+            type de jet sera automatiquement ajusté mais il est <span class="gras">toujours possible de le modifier</span> sur cette fenêtre.
+          </p>
+          <p class="alinea">Le type de Jet est modifié par l’activation de la case à cocher "<span class="gras">Temporaire</span>" de la ligne du Jet de Dommages.</p>
+          <h4>Difficulté</h4>
+          <p class="alinea">
+            Il y a plusieurs possibilités qui apparaissent dans ce champ en fonction de la configuration de l’action. Si rien ne s’affiche, c’est soit que vous n’avez ciblé personne soit
+            que la difficulté n’est pas définie dans l’Action.
+          </p>
+          <ul>
+            <li>Si vous voyez un nombre, cela indique que la difficulté est "fixe" comme par exemple @cible.def qui reprend le score de Défense de la cible.</li>
+            <li>Si le champ affiche @oppose.X, cela signifie que vous faites un jet en opposition. Ce type de jet sera expliqué plus bas.</li>
+          </ul>
+          <p class="alinea">Une <span class="gras">info-bulle vous indique la formule</span> inscrite dans la configuration de l’action.</p>
+          <h4>Jet visible par</h4>
+          <p class="alinea">
+            Ce champ reprend la formule inscrite dans la configuration de l'Action <span class="gras">modifiée par le type de Jet</span>, expliqué plus haut. Vous pouvez modifier la
+            formule de l'Attaque mais vos modifications seront annulées si vous changez le type de Jet ensuite (et donc aussi le choix des Dommages Temporaires). Commencez toujours par ce
+            paramètre avant de modifier la formule à la main. Vous pouvez ajouter des nombres, des variables et des formules de Jet de Dés à cette formule. Une info-bulle, vous informe de
+            la formule inscrite dans la configuration de l'Action et des Bonus éventuels.
+          </p>
+          <h4>Jet d’Attaque</h4>
+          <p class="alinea">
+            Ce champ reprend
+            <span class="gras">la formule inscrite dans la configuration de l’action modifiée par le type de Jet</span>, expliqué plus haut. Vous pouvez modifier la formule de l’Attaque
+            mais vos modifications seront annulées si vous changez le type de Jet ensuite (et donc aussi le choix des Dommages Temporaires). Commencez toujours par ce paramètre avant de
+            modifier la formule à la main. Vous pouvez ajouter <span class="gras">des nombres, des variables et des formules de Jet de Dés</span> à cette formule.
+          </p>
+          <p class="alinea">
+            Une <span class="gras">info-bulle vous informe de la formule</span> inscrite dans la configuration de l’action et <span class="gras">des Bonus éventuels. </span>
+          </p>
+          <h4>Bonus et Malus</h4>
+          <p class="alinea">
+            Les deux champs "bonus" et "malus" vous
+            <span class="gras">permettent de rajouter à la main des bonus/malus circonstanciels.</span> Utilisez la molette de la souris pour modifier ces valeurs. Les nombres doivent être
+            positifs pour la case Bonus et négatifs pour la case Malus. Si vous écrivez "10" dans la case malus, cela applique "+10" au test.
+          </p>
+          <p class="alinea">
+            <span class="gras italique">Attention </span>: les cases sont <span class="gras">modifiées par le choix de l’Option Tactique</span>, que nous verrons un peu plus bas. Si vous
+            modifiez ces cases puis que vous changez d’option tactique, vos modifications seront annulées. Commencez toujours par choisir le Type de Jet et l’Option tactique avant de
+            modifier à la main la formule ou les cases Bonus/Malus.
+          </p>
+          <h4>Critique</h4>
+          <p class="alinea">
+            Un Jet d’Attaque pourra avoir une plage de critique plus grande que le seul 20 naturel.
+            <span class="gras">Le chiffre noté correspond au nombre minimal que vous devez faire sur le D20 pour obtenir une Réussite Critique</span>.
+          </p>
+          <p class="alinea">
+            Ce nombre est déjà modifié par les Actions/Effets que vous avez activées sur votre personnage. Notez simplement dans ce champ le chiffre minimal qu’il faut faire sur le D20
+            pour obtenir une réussite critique (aucune restriction ne limite ce chiffre).
+          </p>
+          <p class="alinea">Une info-bulle informe des effets qui influence la plage de critique.</p>
+          <h4>Modificateurs de compétences</h4>
+          <p class="alinea">
+            Si le test de la résolution d'Attaque est une compétence (@for par exemple), les modificateurs des Actions/Effets de l'Acteur seront listés et sélectionnable ici comme pour un
+            test de Compétence.
+          </p>
+          <h4>Jet de Dommages</h4>
+          <p class="alinea">
+            Si vous avez activé les jets combinés Attaque et Dommages dans les
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#options-du-systeme]{Options du Système}, à cet endroit, la
+            ligne du test de Dommages s’affiche. Toutes les explications sur cette ligne sont détaillées plus bas.
+          </p>
+          <h4>Options Tactiques</h4>
+          <p class="alinea">
+            Comme expliqué dans le Livre de Règles @UUID[Compendium.cof2-base.cof-2-base-regles.JournalEntry.SFIZ9i9XEt3gyYUC.JournalEntryPage.Dw9Ze41hgZ5MdKg2#options-tactiques]{Options
+            tactiques}, les joueurs peuvent, ou non,
+            <span class="gras">utiliser une option tactique pour augmenter leur chance de toucher ou leurs Dommages</span>. De base, aucune Option Tactique n’est sélectionnée. En cliquant
+            sur les cercles vous pouvez appliquer les Bonus et Malus prévus dans les Règles pour chaque option. Cela modifie la formule du Jet de Dommages et l’une des cases Bonus/Malus.
+            Pour chaque option, une <span class="gras">info-bulle vous informe sur l’effet de cette option tactique</span>.
+          </p>
+          <h4>Les Cibles de l’Attaque</h4>
+          <p class="alinea">
+            Ici apparait le ou les Tokens que vous ciblez au moment de l’Attaque. Une
+            <span class="gras">info-bulle vous informe sur le nom du Token</span>.
+          </p>
+          <p class="alinea">Si la difficulté de l'attaque est @cible.def alors la DEF de la ou des cibles sera inscrite en dessous du portrait de la cible.</p>
+          <p class="alinea">
+            Lorsque vous sélectionnez <span class="gras">plusieurs cibles</span>, chaque cible est évaluée individuellement. La
+            <span class="gras">Défense de chaque cible est comparée au résultat du Jet d’Attaque</span> pour déterminer si l’attaque touche cette cible ou non. Ainsi, une même attaque peut
+            toucher certaines cibles et en rater d’autres.
+          </p>
+          <p class="alinea">
+            Le <span class="gras">Message du Chat affichera une liste de cibles avec, pour chacune, le résultat individuel</span> (Succès, Succès critique, Échec ou Échec critique) ainsi
+            que la Défense de la cible si la difficulté est affichée.
+          </p>
+
+          <h3>Jet en opposition</h3>
+          <p class="alinea">
+            <span class="gras">Le cas des Jets en Opposition est légèrement différent</span>. Si votre action a une difficulté sous forme de @oppose.X (par exemple, @oppose.cha pour un
+            test opposé à un jet de Charisme), le résultat de l’action ne sera immédiat.
+          </p>
+          <p class="alinea">
+            <span class="gras">Un bouton "jet opposé" apparaîtra à la place de la Difficulté dans le Message du Chat</span>. En cliquant dessus, un jet sera effectué et le résultat de
+            l’action apparaîtra.
+          </p>
+          <p class="alinea">
+            En cas <span class="gras">d’attaque multi-cibles avec jet en opposition</span>, un bouton "Jet opposé" apparaît pour chaque cible dans le Message du Chat. Chaque défenseur peut
+            effectuer son propre jet en opposition indépendamment.
+          </p>
+          <p class="alinea">
+            Le défenseur peut <span class="gras">utiliser un Point de Chance</span> pour augmenter son jet de 10 points si le résultat de l’opposition est un succès pour l’attaquant et que
+            le défenseur dispose de Points de Chance.
+          </p>
+
+          <h3>Le Message d'Attaque</h3>
+
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_attaque_resultat.webp"></div>
+
+          <p class="alinea">
+            Le résultat de l'Attaque est affiché dans le tchat de FoundryVTT. Ce message
+            <span class="gras">indique le nom de l'Équipement ou de la Capacité ainsi que le nom de l'Action utilisée</span>. Si l'action possède un Message tchat défini (voir la section
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V]{Actions et Effets}), alors c'est ce texte qui sera affiché.
+          </p>
+          <h4>Le cadre du nom</h4>
+          <p class="alinea">
+            Le cadre avec le nom de l'Objet et de l'Action/Effet est dépliable. Si vous avez
+            <span class="gras">un Type de Jet différent de standard et que vous utilisez une des trois Options Tactiques alors cela sera indiqué </span>par des icônes à droite du cadre ou
+            en toutes lettres quand le cadre est déplié.
+          </p>
+          <p class="alinea">La ligne avec la formule du test ainsi que le résultat de chaque dé est aussi présente lorsque le cadre est déplié.</p>
+          <p class="alinea">
+            Vérifier le résultat de chaque dé permet de recalculer le résultat mais surtout de rajouter des bonus si vous possédez une Capacité qui dit, par exemple, "chaque fois qu'un dé
+            obtient le résultat minimal, considérez-le comme le chiffre maximal du dé".
+          </p>
+          <h5>Résultat de l'attaquant</h5>
+          <p class="alinea">
+            Le nombre qui est affiché ensuite est le résultat total de l'attaque. Si une icône <i class="fa-regular fa-clover"></i> s'affiche après le résultat, cela signifie que
+            l'attaquant peut utiliser un point de Chance pour ajouter +10 à son attaque.
+          </p>
+          <h5>La liste des cibles</h5>
+          <p class="alinea">Ensuite, dans une section qui est dépliable, on trouve la liste de toutes les cibles de l'attaque.</p>
+          <p class="alinea">
+            Pour chaque cible est affiché une icône représentant si l'attaque est réussie, ratée, une réussite critique ou un échec critique, l'image du token et le nom du token. A droite
+            du nom, la difficulté aura plusieurs affichages différents :
+          </p>
+          <ul>
+            <li>
+              <span class="gras">Affichage de la Difficulté</span> : si vous avez activé l'affichage de la Difficulté dans les
+              @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#options-du-systeme]{Options du Système} lors votre jet
+              d'Attaque sera comparé à la Difficulté (si elle est renseignée). Dans ce cas, le Message du tchat vous informera si votre jet est un Succès critique, un Succès, un Échec ou
+              un Échec critique.
+            </li>
+            <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_oppose.webp"></div>
+            <li>
+              <span class="gras">Jet en Opposition</span> : Si la Difficulté est sous forme de "@oppose.X" alors un bouton s'affiche dans le Message du tchat. Il est nommé "Jet opposé". En
+              cliquant sur ce bouton, le jet opposé sera effectué comme expliqué plus haut dans la section
+              @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.7BoZ8Un0GrShNPtF#jet-en-opposition]{Jet en opposition}.
+            </li>
+            <li>
+              <span class="gras">L'affichage d'une icône <i class="fa-regular fa-clover"></i> </span>signifie que la cible peut utiliser un Point de Chance pour améliorer son résultat au
+              test opposé. <span class="gras">Les résultats contre chaque cible sont recalculés individuellement</span> : certaines cibles qui étaient ratées peuvent ainsi devenir
+              touchées. Si cela génère au moins un succès, le jet de Dommages sera lancé ou mis à jour.
+            </li>
+          </ul>
+
+          <h3>Effets supplémentaires</h3>
+          <p class="alinea">
+            Afin de ne pas faire des Messages dans le tchat qui prennent toute la hauteur de la fenêtre,<span class="gras">
+              les @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#effet-supplementaire]{Effet Supplémentaire} ne sont pas
+              affichés dans le Message du tchat</span>. Lorsque l'Attaque est réalisée, il faudra regarder dans
+            l'@UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.9Bn7F4sxyKm3TX74#onglet-effets]{Onglet Effets} pour vérifier que l'Effet
+            Supplémentaire a bien été appliqué. L'info-bulle vous dira les Effets appliqués.
+          </p>
+
+          
+          <h2>Jet de dommages</h2>
+
+          <h3>Fenêtre de Dommages</h3>
+          <p class="alinea">
+            Si vous effectuez un Jet de Dommages en cliquant sur l’icône <i class="fa-regular fa-hand-fist"></i> ou si vous avez
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#activer-les-jets-combines-attaque-et-dommages]{Activé les jets
+            combinés Attaque et Dommages} dans les
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.Xr7GWCaNfcxZlsnY#options-du-systeme]{Options du Système}, l<span class="gras">a ligne pour les Dommages est identique.</span>
+          </p>
+          <div class="image-centre"><img src="modules\cof2-base\assets\guide\cof2_jets_dommages.webp"></div>
+
+          <h4>Formule de Dommages</h4>
+          <p class="alinea">
+            Dans cette case est inscrite
+            <span class="gras">la formule configurée dans l’action et les bonus ou malus éventuels</span>. Il est
+            <span class="gras">possible de modifier à la main cette formule pour adapter le Jet à la situation en jeu</span>.
+          </p>
+          <p class="alinea">Ce champ peut recevoir <span class="gras">des nombres, des variables ou des formules de Jet de Dés</span> et toutes combinaisons de ces éléments.</p>
+          <p class="alinea">
+            <span class="gras">Attention</span> : cette case est <span class="gras">modifiée automatiquement par les Options Tactiques</span>, comme expliqué plus haut. Ainsi si vous
+            modifiez à la main cette case puis que vous sélectionnez une option tactique, vos modifications seront effacées.
+          </p>
+
+          <h4>Bonus/Malus</h4>
+          <p class="alinea">
+            Les deux champs "bonus" et "malus" vous
+            <span class="gras">permettent de rajouter à la main des bonus/malus circonstanciels.</span>
+          </p>
+          <p class="alinea">
+            Il est possible d’écrire <span class="gras">des nombres entiers</span> dans les deux champs. Le champ "malus" est de base négatif que vous écriviez "10" ou "-10".
+          </p>
+          <p class="alinea">Utilisez la molette de la souris pour modifier ces champs rapidement.</p>
+
+          <h4>Temporaire</h4>
+          <p class="alinea">
+            Cette case à cocher
+            <span class="gras">permet de déterminer si les Dommages effectués sont des Dommages létaux ou Temporaires</span>. Si la case est déjà cochée, c’est que votre arme inflige des
+            DM Temporaires.
+          </p>
+          <p class="alinea">Dans tous les cas, il est possible de cocher ou de décocher cette case.</p>
+          <p class="alinea">
+            Si vous souhaitez infliger des Dommages Temporaires avec une arme qui ne le permet pas, le type de Jet sera changé en "<span class="gras">avec dé Malus</span>".
+          </p>
+          <p class="alinea">
+            En infligeant les Dommages à la cible grâce aux icônes du Message du Chat,
+            <span class="gras">les Dommages Temporaires seront ajoutés aux "DM Temp." de la cible et le Modificateur de Force de la cible sera soustrait du total de Dommages subis</span>.
+          </p>
+          <h4>Options Tactiques</h4>
+          <p class="alinea">
+            Si vous avez activé pour l'attaque une des options tactique, vous pouvez le faire également sur la fenêtre de Dommages afin d'appliquer les bonus ou malus aux Dommages sur le
+            test.
+          </p>
+          <h4>Les Cibles de l'Attaque</h4>
+          <p class="alinea">Ici apparait le ou les Tokens que vous ciblez au moment du jet de Dommages. Une info-bulle vous informe sur le nom du Token</p>
+
+          <h3>Message des Dommages</h3>
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_dommages.webp"></div>
+          <p class="alinea">
+            Le Message de Dommages dans le tchat présente <span class="gras">l’image et le nom de l’Équipement ou de la Capacité utilisé</span> dans un en-tête dépliable. En cliquant sur
+            l’en-tête, les détails du jet (formule et résultat des dés) sont affichés.
+          </p>
+
+          <h4>Total de Dommages</h4>
+          <p class="alinea"><span class="gras">Le nombre affiché indique le résultat brut du Jet de Dommages</span>, sans multiplicateur appliqué.</p>
+
+          <h4>Temporaire</h4>
+          <p class="alinea">
+            <span class="gras">La case à cocher Temp.</span> au niveau de la carte permet de définir si les Dommages infligés sont temporaires pour toutes les cibles. Si l’équipement est
+            configuré pour infliger des DM temporaires, la case est automatiquement cochée. Les Dommages Temporaires sont ajoutés aux "DM Temp." de chaque cible et le
+            <span class="gras">Modificateur de Force de la cible est soustrait du total de Dommages subis</span>.
+          </p>
+
+          <h4>Section d’Application des Dommages</h4>
+          <p class="alinea">La section d’application est <span class="gras">dépliable</span> et propose deux modes :</p>
+          <ul>
+            <li>
+              <span class="gras">Ciblées</span> : affiche la liste des cibles de l’attaque avec leur portrait, leur nom et les contrôles individuels. Ce mode est sélectionné par défaut si
+              des cibles étaient ciblées lors de l’attaque.
+            </li>
+            <li><span class="gras">Sélectionnées</span> : permet de sélectionner manuellement des Tokens sur la scène pour leur appliquer les Dommages.</li>
+          </ul>
+
+          <h4>Contrôles par cible</h4>
+          <p class="alinea">Pour chaque cible, une ligne affiche les contrôles suivants :</p>
+          <ul>
+            <li><span class="gras">RD</span> : case à cocher individuelle. Cochée par défaut, elle applique la Résistance aux Dommages propre à cette cible.</li>
+            <li>
+              <span class="gras"><i class="fa-solid fa-heart"></i> (Soin)</span> : les Dommages deviennent des soins pour cette cible.
+            </li>
+            <li><span class="gras">0</span> : aucun Dommage n’est infligé. Sélectionné automatiquement si l’attaque a raté cette cible.</li>
+            <li><span class="gras">x½</span> : la moitié des Dommages est infligée. Utile pour les cibles résistantes ou ayant réussi un jet de sauvegarde.</li>
+            <li><span class="gras">x1</span> : les Dommages normaux sont infligés. Sélectionné par défaut si l’attaque touche cette cible (réussite normale).</li>
+            <li><span class="gras">x2</span> : le double des Dommages est infligé. Sélectionné automatiquement en cas de réussite critique contre cette cible.</li>
+          </ul>
+          <p class="alinea">
+            Le <span class="gras">montant calculé est affiché à côté de chaque cible</span> et tient compte du multiplicateur choisi et de la RD individuelle si elle est cochée. Il est
+            possible de <span class="gras">modifier le multiplicateur de chaque cible avant d’appliquer les Dommages</span>.
+          </p>
+          <p class="alinea">
+            Un unique <span class="gras">bouton "Appliquer"</span> en bas de la section applique les Dommages calculés pour toutes les cibles en une seule action. Les Effets
+            Supplémentaires sont également appliqués à ce moment-là, individuellement sur chaque cible touchée.
+          </p>
+          <h5>Multiplicateurs de Critique</h5>
+          <p class="alinea">
+            <span class="gras">Si votre Attaque doit infliger des Dommages critiques supérieurs au double des DM, il faudra faire une manipulation supplémentaire lors de l'application des Dommages.
+            </span>
+          </p>
+          <ul class="exemple">
+            <p class="alinea">
+              <span class="gras">Exemple pour des Dommages critique x3</span> : Après application des dommages avec le bouton x2 sélectionné, cliquez sur les boutons x1 pour les cibles
+              touchées, désélectionnez la case RD et appliquez à nouveau.
+            </p>
+          </ul>
+          <p class="alinea">
+            Ainsi, lorsque vous devez utiliser plusieurs fois une icône de Dommages ou plusieurs icones pour une même cible,
+            <span class="gras">il faut décocher la case RD avant de cliquer sur la deuxième icône de Dommages</span>.
+          </p>
+
+          
+          <h3>Jet de sauvegarde</h3>
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_sauvegarde_initial.webp"></div>
+          <p class="alinea">
+            Pour les tests de sauvegarde, il n'y a pas de fenêtre qui s'affiche pour le personnage qui réalise l'action. En sélectionnant la ou les cibles et en cliquant sur l'action, un
+            message sera directement envoyé dans le tchat.
+          </p>
+          <p class="alinea">
+            Le message du tchat affiche la caractéristique demandée et la difficulté du test. Si une formule de Dommages est configurée sur la Résolution de type
+            @UUID[.a0cY3q3XV4o8Y13V#sauvegarde]{Sauvegarde}, le total des Dommages est affiché sous la difficulté.
+          </p>
+          <h4>Cibles et jets individuels</h4>
+          <p class="alinea"><span class="gras">Chaque cible apparaît dans une liste avec un bouton "Sauvegarde" individuel </span>(une info-bulle indique la compétence demandée).</p>
+          <p class="alinea">
+            Le propriétaire de chaque cible (ou le MJ) peut cliquer sur le bouton pour effectuer le jet de sauvegarde de cette cible. Une fenêtre de @UUID[.#jet-de-caracteristique]{Jet de
+            caractéristique} s'ouvre pour sélectionner les éventuels bonus à appliquer.
+          </p>
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_sauvegarde_resultat.webp"></div>
+          <p class="alinea">
+            Le résultat du jet est affiché sur la ligne de la cible avec une icône colorée indiquant le succès ou l'échec. Si la cible échoue et dispose de Points de Chance, une icône
+            <i class="fa-regular fa-clover"></i> lui permet d'utiliser un PC pour tenter de transformer l'échec en succès.
+          </p>
+          <h4>Dommages liés au test</h4>
+          <p class="alinea">
+            Si une formule de Dommages est configurée sur la Résolution de type Sauvegarde, des contrôles de Dommages par cible apparaissent lorsque le jet est effectué.
+            <span class="gras">Ces contrôles fonctionnent de la même manière que pour le @UUID[.#message-des-dommages$1]{Message des Dommages}</span> : RD individuelle, multiplicateurs
+            (soin, 0, x½, x1, x2) et bouton "Appliquer".
+          </p>
+          <p class="alinea">
+            <span class="gras">Si l'option "Dommages moitié sur réussite" est activée dans la Résolution</span>, une cible qui réussit son jet de sauvegarde aura le multiplicateur x½
+            activé pour recevoir seulement la moitié des Dommages et une cible qui échoue reçoit les Dommages complets (x1). En cas de réussite critique, la cible ne reçoit aucun Dommage
+            (multiplicateur 0).
+          </p>
+          <h4>Effets Supplémentaires</h4>
+          <p class="alinea">
+            <span class="gras">Les @UUID[.a0cY3q3XV4o8Y13V#effet-supplementaire]{Effets Supplémentaires} de la Résolution sont appliqués individuellement sur chaque cible en fonction de son résultat de
+              sauvegarde au moment de cliquer sur le bouton "Appliquer".</span><span></span>
+          </p>
+
+          
+          <h2>Jet de soins et Consommable</h2>
+
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_recuperations.webp" style="width:150px"></div>
+
+          <h3>Récupération Rapide et Complète</h3>
+          <p class="alinea">
+            <span>Lorsque vous effectuez une Récupération Rapide <i class="fa-solid fa-mug-saucer"></i> et lorsque vous souhaitez dépenser votre DR après une Récupération Complète
+              <i class="fa-solid fa-bed"></i>, un Message de Chat apparait.
+            </span>
+          </p>
+          <p class="alinea">
+            Il vous <span class="gras">informe du nombre de Points de Vigueur que vous récupérez</span>. Ces PV sont <span class="gras">ajoutés automatiquement</span> à votre personnage.
+            Il n’y a donc aucune icône pour appliquer les soins dans le Message du Chat.
+          </p>
+          <p class="alinea">Un deuxième message uniquement pour le MJ résumera la récupération effectuée.</p>
+
+          <h3>Action de Soin</h3>
+          <p class="alinea">
+            Si vous consommez une potion ou tout autre Capacité ou Équipement qui possède une Action avec une
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#resolutions]{Résolutions} de type
+            @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#soin]{Soin}, un Message Chat sera affiché.
+          </p>
+          <p class="alinea">
+            Il vous <span class="gras">indique le résultat du Jet de Soin et les Points de Vigueurs sont ajoutés automatiquement</span> à votre Personnage ou à la cible sélectionnée si
+            vous avez configuré la Résolution avec une cible différente de "Soi-même".
+          </p>
+          <p class="alinea">Un deuxième message uniquement pour le MJ résumera le soin effectué.</p>
+
+          <h3>Action Consommable</h3>
+
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_consommable.webp" style="width:150px"></div>
+
+          <p class="alinea">
+            <span>Si vous définissez une Action avec une Résolution de type
+              @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#consommable]{Consommable}, lorsque vous réalisez l’action,
+              un message sera envoyé dans le tchat pour </span><span class="gras">informer que vous avez consommé quelque chose</span>.
+          </p>
+
+          <p class="alinea">
+            <span class="gras italique">Attention :</span> si vous configurez un Équipement avec <span class="gras">le Sous-type "consommable" ET avec une Résolution "consommable"</span>,
+            à chaque utilisation de l'Équipement le système vous fera consommer deux unités d'un coup mais avec une seule fois l'Effet.
+          </p>
+          <h3>Application d'un effet</h3>
+          <p class="alinea">
+            Lorsque qu'un effet est appliqué sur une cible, un message dans le tchat pour indiquer l'acteur qui a réalisé l'action, le nom de l'effet qui est appliqué et la cible de
+            l'effet.
+          </p>
+
+          <h2>Description dans le chat</h2>
+
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_description.webp" style="width:150px"></div>
+          <p class="alinea">
+            A chaque fois que vous voyez l’icône <i class="fa-solid fa-message"></i>, cela signifie que vous pouvez envoyer des informations dans le tchat uniquement pour le MJ.
+          </p>
+          <p class="alinea">Dans tous les cas, le Message affichera <span class="gras">l’image, le nom et la description de l’Objet</span>.</p>
+          <p class="alinea">
+            <span class="gras">Si l’Objet possède une Action/Effet associé alors un ou plusieurs boutons apparaîtront en bas du Message.</span> Ils permettent d’interagir avec l’Objet
+            (activer ou désactiver l’Effet, Attaquer ou lancer les Dommages, utiliser l’Objet…).
+          </p>
+          <p class="alinea">
+            <span class="gras">La description d’un objet dans le tchat est tout le temps envoyé uniquement au MJ et au PJ qui envoie le message</span>. C’est pour cela que le fond du
+            message est de couleur rouge, comme nous le verrons juste après.
+          </p>
+
+          <h3>Jet secret</h3>
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_secret.webp" style="width:150px"></div>
+          <p class="alinea">Une distinction visuelle est faite dans le tchat en fonction de la visibilité du Message.</p>
+          <h4>Message visible de tout le monde</h4>
+          <p class="alinea">Les messages visibles par tout le monde ont un fond "parchemin" en thème clair ou "noir" en thème sombre.</p>
+          <h4>Message pour le MJ et moi</h4>
+          <p class="alinea">
+            Lorsque le message est envoyé seulement au MJ et au joueur réalisant l’action, <span class="gras">le fond du message devient rouge</span>. Le contour du message est identique
+            au messages publics.
+          </p>
+          <h4>Message juste pour moi ou juste pour le MJ</h4>
+          <div class="image-guide"><img src="modules\cof2-base\assets\guide\cof2_tchat_revele.webp" style="width:150px"></div>
+          <p class="alinea">
+            Lorsque le message est envoyé uniquement au MJ ou uniquement à "soi-même",
+            <span class="gras">le fond du message est rouge également ET le contour du message devient violacé</span> en thème clair <span class="gras">ou rouge</span> en thème sombre.
+          </p>
+          <p class="alinea">
+            <span class="gras italique">Attention</span>
+            : le MJ est prévenu que vous avez envoyé un message juste pour vous même si le résultat est remplacé par des points d’interrogation. De la même manière si vous réalisez une
+            action visible uniquement du MJ, vous verrez le message mais le résultat sera remplacé par des points d’interrogation.
+          </p>
+        </div>
     video:
       controls: true
       volume: 0.5
@@ -4946,7 +5006,7 @@ pages:
       systemId: co2
       systemVersion: 13.344.0
       lastModifiedBy: 0VAX0I13R6BbGCjC
-      modifiedTime: 1778175553282
+      modifiedTime: 1778703192044
       createdTime: 1778175444796
     _key: '!journal.pages!Cj2L7dqSXItRSNXi.7BoZ8Un0GrShNPtF'
   - sort: 600000

@@ -82,6 +82,7 @@ system:
       value: '1'
       apply: self
       additionalInfos: ''
+      choiceGroup: 1
     - type: feature
       source: Compendium.cof2-base.cof-2-base-items.Item.sjf4NnY1i9sAZp6d
       subtype: ability
@@ -89,6 +90,7 @@ system:
       value: '1'
       apply: self
       additionalInfos: ''
+      choiceGroup: 1
     - type: feature
       source: Compendium.cof2-base.cof-2-base-items.Item.sjf4NnY1i9sAZp6d
       subtype: ability
@@ -96,6 +98,7 @@ system:
       value: '-1'
       apply: self
       additionalInfos: ''
+      choiceGroup: 2
     - type: feature
       source: Compendium.cof2-base.cof-2-base-items.Item.sjf4NnY1i9sAZp6d
       subtype: ability
@@ -103,6 +106,7 @@ system:
       value: '-1'
       apply: self
       additionalInfos: ''
+      choiceGroup: 2
   paths:
     - Compendium.cof2-base.cof-2-base-items.Item.ye1xGreikB68XVTY
   capacities: []

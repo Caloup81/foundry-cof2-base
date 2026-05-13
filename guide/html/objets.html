@@ -52,18 +52,27 @@
     souvent possible les feuilles verrouillées afin de ne pas modifier ou supprimer des informations importantes de l'Objet par mégarde.
   </p>
 
-  <h3>Effets à supprimer</h3>
+  <h3>Choix de bonus</h3>
   <p class="alinea">
-    Dans certains Objets, souvent les traits et les profils configurés dans le Compendium,
-    <span class="gras">il faudra supprimer ou modifier des paramètres lorsque vous les glissez-déposez sur une feuille de Personnage.</span>
+    Certains Objets, souvent les traits de peuples et les profils configurés dans le Compendium,
+    <span class="gras">proposent un choix entre plusieurs bonus ou malus lorsque vous les glissez-déposez sur une feuille de Personnage.</span>
   </p>
-  <p class="alinea">Lorsqu'il faut faire un choix entre plusieurs bonus, il faudra supprimer les bonus que vous n'avez pas choisis.</p>
+  <p class="alinea">
+    Si des modificateurs de l'Objet sont configurés avec un <span class="gras">Groupe de choix</span> (Choix 1, Choix 2 ou Choix 3),
+    <span class="gras">une fenêtre de dialogue apparaîtra automatiquement au moment du glisser-déposer</span> pour vous permettre de sélectionner le bonus souhaité dans chaque groupe.
+    Seuls les modificateurs choisis seront appliqués au Personnage. Les modificateurs sans groupe de choix sont toujours appliqués automatiquement.
+  </p>
   <ul class="exemple">
     <p class="alinea">
-      Exemple : le Trait du <span class="gras">peuple Gnome</span> vous demande de choisir entre un bonus de +1 en Intelligence ou en Perception. Dans la feuille du Trait, les deux
-      options sont configurées donc si vous ne supprimez pas l'un des deux, votre personnage obtiendra un bonus de +1 dans les deux caractéristiques.
+      Exemple : le Trait du <span class="gras">peuple Gnome</span> vous demande de choisir entre un bonus de +1 en Intelligence ou en Perception.
+      Lorsque vous glissez le Trait sur la feuille du Personnage, une fenêtre vous propose de choisir entre ces deux options.
+      Le malus de -1 en Force, qui n'est pas dans un groupe de choix, est appliqué automatiquement.
     </p>
   </ul>
+  <p class="alinea">
+    <span class="gras italique">Note</span> : si un Objet n'a pas été configuré avec des groupes de choix, il faudra supprimer manuellement les modificateurs non souhaités
+    après le glisser-déposer, en déverrouillant la feuille de l'Objet sur le Personnage.
+  </p>
 
   <h3>Droits de visibilité</h3>
   <p class="alinea">Depuis la version 1.1.0, les feuilles Objets sont différentes en fonction du droit de visibilité paramétré.</p>
@@ -298,6 +307,11 @@
     une immunité quelconque, une augmentation ou diminution des Points de Magie, etc… Il n'y a pas de limite au nombre de Modificateurs que l'on peut ajouter.
   </p>
   <p class="alinea">
+    Lorsque la feuille du Profil n'appartient pas à un Personnage (dans le Compendium ou dans un dossier d'Objets), un champ supplémentaire
+    <span class="gras">Groupe de choix</span> est disponible pour chaque Modificateur. Ce champ permet de regrouper des modificateurs en choix mutuellement exclusifs :
+    lorsque le Profil est glissé-déposé sur un Personnage, une fenêtre de sélection apparaît pour chaque groupe de choix configuré.
+  </p>
+  <p class="alinea">
     Voir @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#modificateurs]{Modificateurs} pour plus d'informations.
   </p>
   <h3>Formations Martiales</h3>
@@ -371,7 +385,13 @@
     <span class="gras">Il est possible d’ajouter autant de Modificateurs que nécessaires.</span>.
   </p>
   <p class="alinea">
-    Voir @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#modificateurs]{Modificateurs} pour plus d'informations.
+    Lorsque la feuille du Trait n’appartient pas à un Personnage (dans le Compendium ou dans un dossier d’Objets), un champ supplémentaire
+    <span class="gras">Groupe de choix</span> est disponible pour chaque Modificateur. Ce champ permet de regrouper des modificateurs en choix mutuellement exclusifs :
+    lorsque le Trait est glissé-déposé sur un Personnage, une fenêtre de sélection apparaît pour chaque groupe de choix configuré.
+    Les modificateurs sans groupe de choix sont toujours appliqués.
+  </p>
+  <p class="alinea">
+    Voir @UUID[Compendium.cof2-base.cof-2-guide-du-systeme.JournalEntry.Cj2L7dqSXItRSNXi.JournalEntryPage.a0cY3q3XV4o8Y13V#modificateurs]{Modificateurs} pour plus d’informations.
   </p>
   <p class="alinea">
     Il est possible de supprimer un Modificateur en cliquant sur l’icône
