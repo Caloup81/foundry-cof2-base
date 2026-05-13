@@ -9,7 +9,8 @@ system:
     déclenché à l’intrusion de toute créature dans une zone d’un à deux mètres
     autour du piège. Une créature peut détecter le piège avec un <strong>test
     d’INT difficulté [15 + INT de l’arquebusier] </strong>avant de le
-    déclencher.</p>
+    déclencher.</p><p><strong>Attention :</strong> adaptez la valeur de INT dans
+    la Résolution si un autre Acteur utilise cet objet.</p>
   source: ''
   origin: Livre des règles p63
   slug: piege-explosif
@@ -71,47 +72,16 @@ system:
       conditions:
         - predicate: isOwned
       resolvers:
-        - type: auto
-          dmg:
-            formula: 5d4° + @int
-          target:
-            type: multiple
-            number: 20
-            scope: all
-          additionalEffect:
-            active: false
-            applyOn: success
-            statuses: []
-            duration: '0'
-            unit: round
-          bonusDiceAdd: false
-          malusDiceAdd: false
-          skill: {}
-      modifiers: []
-    - source: Compendium.cof2-base.cof-2-base-items.Item.BLf2dalmcwySOTBd
-      indice: 1
-      label: 1/2 DM
-      chatFlavor: ''
-      img: icons/svg/d20-highlight.svg
-      type: spell
-      actionType: none
-      properties:
-        activable: true
-        temporary: false
-        noChargesUsed: true
-        visible: false
-        enabled: false
-        noManaCost: false
-      conditions:
-        - predicate: isOwned
-      resolvers:
         - type: save
           saveAbility: agi
           saveDifficulty: '15'
+          dmg:
+            formula: 5d4° + @int
+          halfDmgOnSave: true
           target:
-            type: single
+            type: multiple
+            number: '0'
             scope: all
-            number: 0
           additionalEffect:
             active: false
             applyOn: success
@@ -121,42 +91,7 @@ system:
           bonusDiceAdd: false
           malusDiceAdd: false
           skill: {}
-          dmg: {}
-      modifiers: []
-    - source: Compendium.cof2-base.cof-2-base-items.Item.BLf2dalmcwySOTBd
-      indice: 2
-      label: Détecter le piège
-      chatFlavor: ''
-      img: icons/svg/d20-highlight.svg
-      type: spell
-      actionType: none
-      properties:
-        activable: true
-        temporary: false
-        noChargesUsed: true
-        visible: false
-        enabled: false
-        noManaCost: false
-      conditions:
-        - predicate: isOwned
-      resolvers:
-        - type: save
-          saveAbility: int
-          saveDifficulty: 15+0
-          target:
-            type: single
-            scope: all
-            number: 0
-          additionalEffect:
-            active: false
-            applyOn: success
-            statuses: []
-            duration: '0'
-            unit: round
-          bonusDiceAdd: false
-          malusDiceAdd: false
-          skill: {}
-          dmg: {}
+          hasAttackSuccessThreshold: false
       modifiers: []
 effects: []
 folder: WLZu1Fe3g8DPnkEV
@@ -167,12 +102,12 @@ flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.351'
+  coreVersion: '14.360'
   systemId: co2
   systemVersion: '#{VERSION}#'
   createdTime: 1743524900148
-  modifiedTime: 1769106529394
-  lastModifiedBy: oByx0z6HY26hEziz
+  modifiedTime: 1778711392446
+  lastModifiedBy: ePdqHYP2Rj2kqVsh
   exportSource:
     worldId: cov2-dev
     uuid: null
