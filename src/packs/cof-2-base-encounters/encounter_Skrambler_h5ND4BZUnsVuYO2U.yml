@@ -625,8 +625,8 @@ items:
           modifiers: []
       frequency: none
       inGame: >-
-        <p>L'action lance les DM et demande un test de sauvegarde de CON. En
-        cas de réussite, les DM sont divisés par 2.</p>
+        <p>L'action lance les DM et demande un test de sauvegarde de CON. En cas
+        de réussite, les DM sont divisés par 2.</p>
       rank: 0
       allowLinkedCapacity: false
       linkedCapacity: null

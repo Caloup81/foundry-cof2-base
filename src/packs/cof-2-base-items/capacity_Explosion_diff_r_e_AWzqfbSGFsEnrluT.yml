@@ -19,10 +19,10 @@ system:
     lumière équivalant celle d’une torche.</p>
   inGame: >-
     <p>Le joueur sélectionne ses cibles puis clique sur l'action pour lancer le
-    sort qui va lancer les dommages et demander un test de sauvegarde d'AGI.
-    En cas de réussite, les DM sont divisés par 2.</p><p>Pensez à remplacer
-    @int par @cha pour les ensorceleur ou barde.</p><p><em>Note : Pour utiliser
-    la "concentration" faites SHIFT+CLIC sur l'action</em></p>
+    sort qui va lancer les dommages et demander un test de sauvegarde d'AGI. En
+    cas de réussite, les DM sont divisés par 2.</p><p>Pensez à remplacer @int
+    par @cha pour les ensorceleur ou barde.</p><p><em>Note : Pour utiliser la
+    "concentration" faites SHIFT+CLIC sur l'action</em></p>
   source: ''
   origin: Livre des règles p161
   slug: explosion-differee

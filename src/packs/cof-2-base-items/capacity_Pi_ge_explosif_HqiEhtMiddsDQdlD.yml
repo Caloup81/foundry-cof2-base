@@ -16,8 +16,9 @@ system:
     @UUID[Compendium.cof2-base.cof-2-base-items.Item.BLf2dalmcwySOTBd]{Piège
     explosif} au joueur. A terme, un système de crafting sera mis en place pour
     créer automatiquement ces objets.</p><p>L'équipement est utilisable en
-    l'état par les joueurs et gère les DM et le test de sauvegarde.</p><p>L'action
-    permet de réaliser le test de détection du piège.</p>
+    l'état par les joueurs et gère les DM et le test de
+    sauvegarde.</p><p>L'action permet de réaliser le test de détection du
+    piège.</p>
   source: ''
   origin: Livre des règles p63
   slug: piege-explosif
