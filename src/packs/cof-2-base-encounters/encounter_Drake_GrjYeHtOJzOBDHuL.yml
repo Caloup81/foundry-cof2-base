@@ -340,7 +340,9 @@ items:
           conditions:
             - predicate: isOwned
           resolvers:
-            - type: auto
+            - type: save
+              saveAbility: agi
+              saveDifficulty: '12'
               dmg:
                 formula: 8d4°
               target:
@@ -356,6 +358,7 @@ items:
               bonusDiceAdd: false
               malusDiceAdd: false
               skill: {}
+              halfDmgOnSave: true
           modifiers: []
       allowLinkedCapacity: false
       linkedCapacity: null
