@@ -57,7 +57,7 @@ system:
             formula: '0'
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: all
           additionalEffect:
             active: true
@@ -94,7 +94,7 @@ system:
           saveDifficulty: '15'
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: all
           additionalEffect:
             active: false

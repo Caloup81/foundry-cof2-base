@@ -577,7 +577,7 @@ items:
                 formula: 6d6+18
               target:
                 type: multiple
-                number: 20
+                number: 0
                 scope: all
               additionalEffect:
                 active: false

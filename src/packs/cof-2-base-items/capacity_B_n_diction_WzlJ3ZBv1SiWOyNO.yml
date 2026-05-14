@@ -102,7 +102,7 @@ system:
           malusDiceAdd: false
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: allies
           additionalEffect:
             active: true

@@ -50,7 +50,7 @@ system:
             formula: '@rang[2,2,2,2,3]d4° + @cha'
           target:
             type: multiple
-            number: 20
+            number: 0
             scope: all
           additionalEffect:
             active: false

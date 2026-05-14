@@ -54,7 +54,7 @@ system:
             formula: 3d4° + @int
           target:
             type: multiple
-            number: 20
+            number: 0
             scope: all
           additionalEffect:
             active: false
@@ -88,7 +88,7 @@ system:
           saveDifficulty: 10+@int
           target:
             type: multiple
-            number: 20
+            number: 0
             scope: all
           additionalEffect:
             active: true

@@ -49,7 +49,7 @@ system:
             formula: '@rang[1,1,1,2,2]d4°'
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: all
           additionalEffect:
             active: false

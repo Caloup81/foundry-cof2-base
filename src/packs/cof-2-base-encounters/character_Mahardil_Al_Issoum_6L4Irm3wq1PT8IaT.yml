@@ -2971,7 +2971,7 @@ items:
               malusDiceAdd: false
               target:
                 type: multiple
-                number: 10
+                number: 0
                 scope: all
               additionalEffect:
                 active: true
@@ -3292,7 +3292,7 @@ items:
                 formula: 1d4°
               target:
                 type: multiple
-                number: 10
+                number: '2+@cha'
                 scope: allies
               additionalEffect:
                 active: false

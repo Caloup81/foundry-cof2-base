@@ -53,7 +53,7 @@ system:
             formula: ' 2d4° + @cha'
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: all
           additionalEffect:
             active: false

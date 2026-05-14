@@ -1319,7 +1319,7 @@ items:
               malusDiceAdd: false
               target:
                 type: multiple
-                number: 10
+                number: 0
                 scope: allies
               additionalEffect:
                 active: true
@@ -1551,7 +1551,7 @@ items:
                 formula: '@rang[2,2,2,2,3]d4° + @cha'
               target:
                 type: multiple
-                number: 20
+                number: 0
                 scope: all
               additionalEffect:
                 active: false
@@ -2184,7 +2184,7 @@ items:
                 formula: 2d4°+@cha
               target:
                 type: multiple
-                number: 8
+                number: 0
                 scope: allies
               dmg: {}
               bonusDiceAdd: false
@@ -2285,7 +2285,7 @@ items:
                 formula: 3d4°+@cha + @toutrang[5]d4°
               target:
                 type: multiple
-                number: 5
+                number: '@cha'
                 scope: allies
               additionalEffect:
                 active: false
@@ -3312,7 +3312,7 @@ items:
                 formula: 2d4°+@cha
               target:
                 type: multiple
-                number: 20
+                number: 0
                 scope: all
               additionalEffect:
                 active: false
@@ -3864,7 +3864,7 @@ items:
                 formula: '0'
               target:
                 type: multiple
-                number: 10
+                number: 0
                 scope: enemies
               additionalEffect:
                 active: true

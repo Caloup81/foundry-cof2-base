@@ -51,7 +51,7 @@ system:
             formula: '@arme.dmg'
           target:
             type: multiple
-            number: 15
+            number: 0
             scope: all
           additionalEffect:
             active: false

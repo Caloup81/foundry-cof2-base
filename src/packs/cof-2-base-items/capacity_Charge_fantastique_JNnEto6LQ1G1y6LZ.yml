@@ -100,7 +100,7 @@ system:
           malusDiceAdd: false
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: all
           additionalEffect:
             active: true

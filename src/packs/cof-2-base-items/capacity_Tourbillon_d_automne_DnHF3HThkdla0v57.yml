@@ -56,7 +56,7 @@ system:
             formula: 3d4° + @per
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: all
           additionalEffect:
             active: false

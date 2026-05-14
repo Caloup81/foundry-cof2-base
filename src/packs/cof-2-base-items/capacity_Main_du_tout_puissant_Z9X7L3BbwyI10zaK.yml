@@ -55,7 +55,7 @@ system:
             formula: 4d4° + @vol
           target:
             type: multiple
-            number: 20
+            number: 0
             scope: all
           additionalEffect:
             active: true

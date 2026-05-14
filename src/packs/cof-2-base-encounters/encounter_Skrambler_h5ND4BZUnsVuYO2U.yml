@@ -610,7 +610,7 @@ items:
                 formula: 5d6
               target:
                 type: multiple
-                number: 20
+                number: 0
                 scope: all
               additionalEffect:
                 active: false

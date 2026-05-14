@@ -1468,7 +1468,7 @@ items:
                 formula: 3d4°+ @for
               target:
                 type: multiple
-                number: 8
+                number: 0
                 scope: all
               additionalEffect:
                 active: false
@@ -1502,7 +1502,7 @@ items:
               saveDifficulty: '10'
               target:
                 type: multiple
-                number: 8
+                number: 0
                 scope: all
               additionalEffect:
                 active: true

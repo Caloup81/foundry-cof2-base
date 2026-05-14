@@ -1445,7 +1445,7 @@ items:
                 formula: 4d4°+@cha
               target:
                 type: multiple
-                number: 10
+                number: 0
                 scope: all
               additionalEffect:
                 active: false
@@ -1783,7 +1783,7 @@ items:
                 formula: '0'
               target:
                 type: multiple
-                number: 10
+                number: '1d4°+@cha'
                 scope: all
               additionalEffect:
                 active: true
@@ -2521,7 +2521,7 @@ items:
                 formula: 2d4° + @cha
               target:
                 type: multiple
-                number: 3
+                number: '@rang'
                 scope: all
               additionalEffect:
                 active: false
@@ -2554,7 +2554,7 @@ items:
               saveDifficulty: 10+@cha
               target:
                 type: multiple
-                number: 3
+                number: '@rang'
                 scope: all
               additionalEffect:
                 active: false

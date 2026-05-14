@@ -2234,7 +2234,7 @@ items:
                 formula: '@arme.dmg / 2'
               target:
                 type: multiple
-                number: 10
+                number: 0
                 scope: all
               additionalEffect:
                 active: false

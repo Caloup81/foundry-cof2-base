@@ -78,7 +78,7 @@ system:
             formula: 3d4°
           target:
             type: multiple
-            number: 20
+            number: 0
             scope: all
           additionalEffect:
             active: false
@@ -114,7 +114,7 @@ system:
             formula: 2d4°
           target:
             type: multiple
-            number: 20
+            number: 0
             scope: all
           additionalEffect:
             active: false
@@ -150,7 +150,7 @@ system:
             formula: 1d4°
           target:
             type: multiple
-            number: 20
+            number: 0
             scope: all
           additionalEffect:
             active: true
@@ -190,7 +190,7 @@ system:
           saveDifficulty: 10+@rang
           target:
             type: multiple
-            number: 20
+            number: 0
             scope: all
           additionalEffect:
             active: true

@@ -93,7 +93,7 @@ system:
             formula: 2d4° + @cha
           target:
             type: multiple
-            number: 3
+            number: '@rang'
             scope: all
           additionalEffect:
             active: false
@@ -127,7 +127,7 @@ system:
           saveDifficulty: 10+@cha
           target:
             type: multiple
-            number: 3
+            number: '@rang'
             scope: all
           additionalEffect:
             active: false

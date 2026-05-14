@@ -56,7 +56,7 @@ system:
             formula: 5d4° + @int
           target:
             type: multiple
-            number: 50
+            number: 0
             scope: all
           additionalEffect:
             active: false

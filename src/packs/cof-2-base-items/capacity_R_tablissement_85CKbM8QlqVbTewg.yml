@@ -57,7 +57,7 @@ system:
             formula: 3d4°+@cha + @toutrang[5]d4°
           target:
             type: multiple
-            number: 5
+            number: '@cha'
             scope: allies
           additionalEffect:
             active: false

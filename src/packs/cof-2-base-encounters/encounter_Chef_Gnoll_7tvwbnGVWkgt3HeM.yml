@@ -726,7 +726,7 @@ items:
             - type: buffDebuff
               target:
                 type: multiple
-                number: 20
+                number: 0
                 scope: all
               additionalEffect:
                 active: true
@@ -888,7 +888,7 @@ items:
             - type: buffDebuff
               target:
                 type: multiple
-                number: 20
+                number: 0
                 scope: all
               additionalEffect:
                 active: true

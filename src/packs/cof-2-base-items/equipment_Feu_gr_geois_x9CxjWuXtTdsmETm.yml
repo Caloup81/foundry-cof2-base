@@ -62,7 +62,7 @@ system:
             formula: '2d4° '
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: all
           additionalEffect:
             active: false
@@ -111,7 +111,7 @@ system:
           saveDifficulty: 10+0
           target:
             type: multiple
-            number: 10
+            number: 0
             scope: all
           additionalEffect:
             active: false
